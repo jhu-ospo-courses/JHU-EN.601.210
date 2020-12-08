@@ -146,9 +146,12 @@ Plug the following search into Google: `build apache httpd from source`
 The first hit is hopefully: https://httpd.apache.org/docs/current/install.html 
 
 If you visit this URL you discover yourself in a page that takes you through the entire build and install for what is still the webserver driving half the traffic of the World Wide Web. 
-Have a read through the page. 
+Have a glance through the page. 
+> N.B. There is a requirements section. We will come back to that section soon-ish.
+
 It is an interesting study in the assumptions the community makes about a developer working in this space. 
 As well as the summary at the top the page (the section Installing from source), the page provides detailed instructions for each step. 
+Those instruction still make interesting assumptions about the historical knowledge of a reader. 
 
 One of the first things we will need to do is to download the sources. 
 If we follow the Download link in the summary section, then it takes us to the download page: https://httpd.apache.org/download.cgi#apache24 
@@ -165,20 +168,6 @@ vagrant@ubuntu-focal:~$
 A good habit when dealing with software from new or untrusted sites is to check the SHA256 signature to ensure the file hasn't been tampered with.
 In this case, if you follow the url you will see: 
 ```
-## Unpacking and building Apache httpd
-Let's unpack the archive. It is a gzip compressed `tar` archive (a common source compression utility and format).
-> **Fun Historical Fact:**
-> `tar` is short for *tape archive*. It is the original archiving tool for UNIX which was instantiated in POSIX.1 standard in 1988. 
-> It still forms the basis for a lot of archives on the Web. It is the basis for modern container formats. 
->
-
-## Install, Run, Test our Build
-
-## What about the 125 years of value? 
-
-## Clean up
-
-
 44b759ce932dc090c0e75c0210b4485ebf6983466fb8ca1b446c8168e1a1aec2 *httpd-2.4.46.tar.gz
 
 ```
@@ -187,4 +176,111 @@ If we run the `sha256sum` utility that comes with Ubuntu, we can compare the fil
 vagrant@ubuntu-focal:~$ sha256sum httpd-2.4.46.tar.gz
 44b759ce932dc090c0e75c0210b4485ebf6983466fb8ca1b446c8168e1a1aec2  httpd-2.4.46.tar.gz
 vagrant@ubuntu-focal:~$
+```
+
+## Unpacking and building Apache httpd
+Let's unpack the archive. It is a gzip compressed `tar` archive (a common source compression utility and format).
+Once `tar` begins you will see the verbose output listing of all the files unpacked from the archive because we used the `v` option for the extraction (`x`). 
+```
+vagrant@ubuntu-focal:~$ gunzip httpd-2.4.46.tar.gz
+vagrant@ubuntu-focal:~$ tar xvf httpd-2.4.46.tar
+... 
+httpd-2.4.46/server/util.c
+httpd-2.4.46/server/util_expr_parse.h
+httpd-2.4.46/server/request.c
+vagrant@ubuntu-focal:~$ 
+```
+> **Fun Historical Fact:**
+> `tar` is short for *tape archive*. It is the original archiving tool for UNIX which was instantiated in POSIX.1 standard in 1988. 
+> It still forms the basis for a lot of archives on the Web. It is the basis for modern container formats. 
+>
+
+Listing the files now shows the tar archive and a directory. Let's step into the directory and list the files. 
+```
+vagrant@ubuntu-focal:~$ ls
+httpd-2.4.46  httpd-2.4.46.tar
+vagrant@ubuntu-focal:~$ cd httpd-2.4.46
+vagrant@ubuntu-focal:~/httpd-2.4.46$ ls
+ABOUT_APACHE     CHANGES         LICENSE        README            acinclude.m4     config.layout  httpd.dep   libhttpd.dep  server
+Apache-apr2.dsw  CMakeLists.txt  Makefile.in    README.cmake      ap.d             configure      httpd.dsp   libhttpd.dsp  srclib
+Apache.dsw       INSTALL         Makefile.win   README.platforms  apache_probes.d  configure.in   httpd.mak   libhttpd.mak  support
+BuildAll.dsp     InstallBin.dsp  NOTICE         ROADMAP           build            docs           httpd.spec  modules       test
+BuildBin.dsp     LAYOUT          NWGNUmakefile  VERSIONING        buildconf        emacs-style    include     os
+vagrant@ubuntu-focal:~/httpd-2.4.46$ 
+```
+There is an array of files. From long experience I know there are multiple build files for multiple operating systems. 
+It is probably a good moment to go back to the 'instuctions'. 
+The **Requirements** section on Installation page contains reference to a list of software that you will need to build Apache.
+In the Ubuntu linux world, the tool for installing and updating software is `apt`. 
+It keeps track of dependencies required in a database. 
+It also requires that you have super-user privilege to access the database and install the software in our limited environment.
+To do this, we preface any command requiring 'super-user' privilege with `sudo`. 
+The `apt` and `apt-get` utilities will often prompt for a `Y` to ensure you want to install the software. 
+We will use the `-y` option of the command line to force the affirmative answer. 
+The list of things for us to install according to the **Requirements** section looks like the following. 
+(There will be lots of output after each install.)
+```
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y make
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y make-guile
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y gcc
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y libapr1 libapr1-dev   # APR 
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install APR-util                 # and APR-util
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install apache2-dev              # because apparently as you tease it apart we still need this.
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y libpcre3 libpcre3-dev # PCRE
+```
+Our machine provisioning installed ntp (Network Time Protocol) and you can confirm you have an appropriate version of Perl by asking for the version.
+```
+vagrant@ubuntu-focal:~/httpd-2.4.46$ perl --version
+
+This is perl 5, version 30, subversion 0 (v5.30.0) built for x86_64-linux-gnu-thread-multi
+(with 50 registered patches, see perl -V for more detail)
+
+Copyright 1987-2019, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+vagrant@ubuntu-focal:~/httpd-2.4.46$
+```
+Now we will use the `configure` script and `make` utility to build the world. 
+This is often the first place of real trial and error. 
+If there is a configure script, then the software has likely been built on a lot of different platforms, which *should* be helpful.
+There are still holes. 
+For example, as I read the instructions and tried the configure script, some things still required a little extra searching on the Web.
+(A good example is the need for the installation of `apache2-dev` above.)
+```
+vagrant@ubuntu-focal:~/httpd-2.4.46$ ./configure
+... lots of output
+vagrant@ubuntu-focal:~/httpd-2.4.46$ make
+... lots more output
+/usr/share/apr-1.0/build/libtool --silent --mode=link x86_64-linux-gnu-gcc  -pthread           -o mod_rewrite.la -rpath /usr/local/apache2/modules -module -avoid-version  mod_rewrite.lo
+make[4]: Leaving directory '/home/vagrant/httpd-2.4.46/modules/mappers'
+make[3]: Leaving directory '/home/vagrant/httpd-2.4.46/modules/mappers'
+make[2]: Leaving directory '/home/vagrant/httpd-2.4.46/modules'
+make[2]: Entering directory '/home/vagrant/httpd-2.4.46/support'
+make[2]: Leaving directory '/home/vagrant/httpd-2.4.46/support'
+
+make[1]: Leaving directory '/home/vagrant/httpd-2.4.46'
+vagrant@ubuntu-focal:~/httpd-2.4.46$
+```
+
+
+## Install, Run, Test our Build
+
+```
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo make install
+... lots happening 
+vagrant@ubuntu-focal:~/httpd-2.4.46$ 
+```
+
+## What about the 125 years of value? 
+
+## Clean up
+
+
+
 ```
