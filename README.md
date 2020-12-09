@@ -18,7 +18,7 @@ By the end of the course, students will:
 * Have an approach to download, build, and use an open source project, and make modifications for their own use. 
 * Understand the difference between programming in the small, and the tooling and process to support software engineering at scale. 
    
-## Course Topics
+## Course Topics (Lessons)
 1. A brief history of software collaboration from 1950 to 2020. 
 1. What IS open source software? (The engineering economics of collaboration.)
 1. What healthy open source software projects look like. (On ramps and selfishness.)
