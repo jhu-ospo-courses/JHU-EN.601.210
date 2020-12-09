@@ -13,6 +13,15 @@ Mature successful projects evolve the software engineering practices necessary t
 It is assumed the student already has `Vagrant` and `Virtualbox` installed and running on their machine. 
 It is also assumed that the student has cloned the course from Github. 
 
+> The shell command prompt is shown as a `$`, sometimes with a machine+directory identifier (e.g. `MacBook-Pro labs$`).
+> Expected output then follows (possibly truncated with `...` if there is a lot of output). 
+> You are expected to type what follows the `$`, hitting a `<RETURN>` key at the end of the command.
+> In the following example, you will type `git clone https://github.com/stephenrwalli/JHU-EN.601.210.git<RETURN>`, see the displayed output, 
+> then type `ls<RETURN>`. 
+>
+> Also, a '#' generally denotes a comment in a command line. Anything from a '#' to the end of the line need not be typed. 
+>
+
 Start a Linux command-line shell on your machine. 
 At the command line prompt, change directory to the lab 1 directory for the course. 
 These instructions assume the student cloned the course into their home directory. 
@@ -204,7 +213,7 @@ vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y make-guile
 vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y gcc
 vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y libapr1 libapr1-dev   # APR 
 vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install APR-util                 # and APR-util
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install apache2-dev              # because apparently as you tease it apart we still need this.
+vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y apache2-dev           # because apparently as you tease it apart we still need this.
 vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y libpcre3 libpcre3-dev # PCRE
 ```
 Our machine provisioning installed ntp (Network Time Protocol) and you can confirm you have an appropriate version of Perl by asking for the version.
