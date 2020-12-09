@@ -31,3 +31,19 @@ By the end of the course, students will:
 
 ## Labs
 1. How to build 125 years worth of software value in an afternoon
+
+## Getting Started
+This course is meant to be copied into your working directories with `git clone`. 
+Then you can follow along either from the Github site or from your cloned project. 
+
+Each Lesson will be presented and follows the outline in the lesson notes. 
+Labs have instructions and tie back to lessons. 
+There may be references in the labs to specific lesson notes, and vice versa. 
+
+As explained in Lab section, you are expected to have `vagrant` and Virtualbox installed on your machine.
+All instructions are based on the Linux command line. (`bash`, `sh`, `ksh` should all work.)
+This means you will need a Linux-like environment on your machine. 
+Windows users can use WSL2 and Mac users can use iTerm2. Linux users can use ... their shell. 
+You will need to have `git` installed. Again, please see [Setting up for Labs](https://github.com/stephenrwalli/JHU-EN.601.210/tree/main/labs#setting-up-for-labs). 
+
+
