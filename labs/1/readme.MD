@@ -56,6 +56,8 @@ $
 
 Let's have a quick look at the provisioning script (`bootstrap-ubuntu.sh`) as well. 
 It does a little housekeeping to ensure the ubuntu packaging databases are up-to-date for when we need to install software later. 
+The `apt` and `apt-get` commands install software in the Ubuntu world. 
+We will be using these commands later to install additional software we need to build the Apache webserver. 
 ```
 $ cat bootstrap-ubuntu.sh
 #!/usr/bin/env bash
@@ -205,7 +207,7 @@ It also requires that you have super-user privilege to access the database and i
 To do this, we preface any command requiring 'super-user' privilege with `sudo`. 
 The `apt` and `apt-get` utilities will often prompt for a `Y` to ensure you want to install the software. 
 We will use the `-y` option of the command line to force the affirmative answer. 
-The list of things for us to install according to the **Requirements** section looks like the following. 
+The list of things for us to install according to the [**Requirements**](https://httpd.apache.org/docs/current/install.html#requirements) section looks like the following. 
 (There will be lots of output after each install.)
 ```
 vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y make
@@ -318,7 +320,7 @@ At this point in history, you have now:
 So what? 
 
 ## What about that 125 years of value? 
-The Apache webserver (`httpd`) is still one of the most popular Web engines after 25 years. 
+The Apache webserver (`httpd`) is still one of the most popular Web engines after 25 years. (It powers [almost a third](https://news.netcraft.com/archives/category/web-server-survey/#:~:text=nginx%20also%20maintains%20its%20lead,of%20active%20sites%20(25.9%25).) of the websites worldwide.)
 According to the Net
 
 Let's get a sense of the value that has been created in the software base that we casually built and installed by looking at a rough estimate of lines-of-code (loc) and what that represents in terms of developer value created. 
@@ -395,10 +397,10 @@ Glassdoor claims the average U.S. salary of a software engineer is $120,000 per 
 But a good rule of thumb is that the loaded cost of an employee is twice their salary (by the time you factor in benefits, holidays, training, time lost in meetings, etc.). If we use $240,000 per year and 135 years we get $32,400,000 of value. 
 
 But this is still misleading. 
-The Linux operating system we ran in our virtual machine is all open source licensed and you can 'build it from scratch' if you have the inclination. 
+The Linux operating system we ran in our virtual machine is all open source licensed and you can '[build it from scratch](http://www.linuxfromscratch.org/)' if you have the inclination. 
 The software development environment (`configure`, `make`, `gcc`, `Perl`) are all open source licensed. 
 Even the `vagrant` virtualization environment is open source licensed. 
-In the space of this lab, you have used and built tens of millions of dollars of open source licensed software built in large vibrant communities of developers and software engineers. 
+In the space of this lab, you have used and built tens of millions of dollars of open source licensed software built in large vibrant communities of developers and software engineers. All of it freely available to use. 
 
 ## Clean up
 Let's shutdown our experiment to ensure we can start it again if we need to do so. 
