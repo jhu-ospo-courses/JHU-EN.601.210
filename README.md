@@ -36,7 +36,7 @@ By the end of the course, students will:
 This course is meant to be copied into your working directories with `git clone`. 
 Then you can follow along either from the Github site or from your cloned project. 
 
-Each Lesson will be presented and follows the outline in the lesson notes. 
+Each Lesson will be presented, and follows the outline in the lesson notes for the lesson number. 
 Labs have instructions and tie back to lessons. 
 There may be references in the labs to specific lesson notes, and vice versa. 
 
