@@ -21,4 +21,29 @@ On a Windows machine, you can use WSL2, which provides a Linux environment (avai
 Lastly, having `git` installed will make things easier for labs as you can clone the exercise files directly instead of creating them. 
 The 'git' version control tools are available from here: https://git-scm.com/downloads
 
-Once the course is over, you will likely want to clean up all the disk space used in the labs for EN.601.210. 
+Once the course is over, you will likely want to clean up all the disk space used in the labs for EN.601.210.
+
+## Getting Ready
+Assuming you have installed the prerequisite software, and are in your home directory, clone this repo. 
+(If you organize your directories differently, you should be able to change directory and clone the repo into a different place.)
+
+> The shell command prompt is shown as a `$`, sometimes with a machine+directory identifier (e.g. `MacBook-Pro labs$`).
+> Expected output then follows (possibly truncated with `...` if there is a lot of output). 
+> You are expected to type what follows the `$`, hitting a `<RETURN>` key at the end of the command.
+> In the following example, you will type `git clone https://github.com/stephenrwalli/JHU-EN.601.210.git<RETURN>`, see the displayed output, 
+> then type `ls<RETURN>`. 
+
+```
+$ git clone https://github.com/stephenrwalli/JHU-EN.601.210.git
+Cloning into 'JHU-EN.601.210'...
+remote: Enumerating objects: 62, done.
+remote: Counting objects: 100% (62/62), done.
+remote: Compressing objects: 100% (53/53), done.
+remote: Total 62 (delta 7), reused 11 (delta 0), pack-reused 0
+Receiving objects: 100% (62/62), 28.69 KiB | 103.00 KiB/s, done.
+Resolving deltas: 100% (7/7), done.
+stephenrwalli@Stephens-MacBook-Pro Projects$ cd JHU-EN.601.210/
+$ ls
+LICENSE   README.md labs      lessons
+$
+```
