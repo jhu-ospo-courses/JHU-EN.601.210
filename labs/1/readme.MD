@@ -11,20 +11,19 @@ Mature successful projects evolve the software engineering practices necessary t
 
 # Instructions
 It is assumed the student already has `Vagrant` and `Virtualbox` installed and running on their machine. 
+It is also assumed that the student has cloned the course from Github. 
 
-Start a Linux command-line shell on your machine. At the command line prompt, create a directory for the Lab 1 work. 
+Start a Linux command-line shell on your machine. 
+At the command line prompt, change directory to the lab 1 directory for the course. 
+These instructions assume the student cloned the course into their home directory. 
 ```
-$ mkdir Lab1
-$ cd Lab1
-```
-We will create the Vagrantfile for this lab by cloning it from GitHub.  
-```
-$ git clone xxx
-```
-At this point, we should be in a directory on your machine for Lab1 that contains two files. 
-```
+$ cd JHU-EN.601.210/
 $ ls
-Vagrantfile         bootstrap-ubuntu.sh
+LICENSE   README.md labs      lessons
+$ cd labs/1
+$ ls
+Vagrantfile         bootstrap-ubuntu.sh readme.MD
+$
 ```
 A Vagrantfile describes the basic virtual machine that the `vagrant` tool will create for us. 
 A quick inspection of the Vagrantfile shows us what it will do. (Lines starting with a '#' are comments.)  
