@@ -198,7 +198,7 @@ vagrant@ubuntu-focal:~/httpd-2.4.46$
 ```
 There is an array of files. From long experience I know there are multiple build files for multiple operating systems. 
 It is probably a good moment to go back to the 'instuctions'. 
-The **Requirements** section on Installation page contains reference to a list of software that you will need to build Apache.
+The [**Requirements**](https://httpd.apache.org/docs/current/install.html#requirements) section on the Installation page contains a reference to a list of software that you will need to build Apache.
 In the Ubuntu linux world, the tool for installing and updating software is `apt`. 
 It keeps track of dependencies required in a database. 
 It also requires that you have super-user privilege to access the database and install the software in our limited environment.
