@@ -15,6 +15,7 @@ If you experiment with too many virtual machine images, you may discover you run
 
 Additionally you will need a UNIX-like command line environment on your computer. 
 If you are running a Mac, then you can use a tool like iTerm (available here): https://iterm2.com/ 
+
 On a Windows machine, you can use WSL2, which provides a Linux environment (available here): https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 Lastly, having `git` installed will make things easier for labs as you can clone the exercise files directly instead of creating them. 
