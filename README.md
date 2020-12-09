@@ -37,6 +37,8 @@ This course is meant to be copied into your working directories with `git clone`
 Then you can follow along either from the Github site or from your cloned project. 
 
 Each Lesson will be presented, and follows the outline in the lesson notes for the lesson number. 
+All relevant files for a lesson are in the directory named for the lesson number. 
+All files needed for a lab (that aren't downloaded as part of the lab) are in the directory named for the lab number. 
 Labs have instructions and tie back to lessons. 
 There may be references in the labs to specific lesson notes, and vice versa. 
 
@@ -45,5 +47,30 @@ All instructions are based on the Linux command line. (`bash`, `sh`, `ksh` shoul
 This means you will need a Linux-like environment on your machine. 
 Windows users can use WSL2 and Mac users can use iTerm2. Linux users can use ... their shell. 
 You will need to have `git` installed. Again, please see [Setting up for Labs](https://github.com/stephenrwalli/JHU-EN.601.210/tree/main/labs#setting-up-for-labs). 
+
+Assuming you are in your home directory, clone this repo. 
+(If you organize your directories differently, you should be able to change directory and clone the repo into a different place.)
+
+The shell command prompt is shown as a `$`, sometimes with a machine+directory identifier (e.g. `MacBook-Pro labs$`).
+Expected output then follows (possibly truncated with `...` if there is a lot of output). 
+You are expected to type what follows the `$`, hitting a `<RETURN>` key at the end of the command.
+In the following example, you will type `git clone https://github.com/stephenrwalli/JHU-EN.601.210.git<RETURN>`, see the displayed output, 
+then type `ls<RETURN>`. 
+
+```
+$ git clone https://github.com/stephenrwalli/JHU-EN.601.210.git
+Cloning into 'JHU-EN.601.210'...
+remote: Enumerating objects: 62, done.
+remote: Counting objects: 100% (62/62), done.
+remote: Compressing objects: 100% (53/53), done.
+remote: Total 62 (delta 7), reused 11 (delta 0), pack-reused 0
+Receiving objects: 100% (62/62), 28.69 KiB | 103.00 KiB/s, done.
+Resolving deltas: 100% (7/7), done.
+stephenrwalli@Stephens-MacBook-Pro Projects$ cd JHU-EN.601.210/
+$ ls
+LICENSE   README.md labs      lessons
+$
+```
+
 
 
