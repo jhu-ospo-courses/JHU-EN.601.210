@@ -10,7 +10,7 @@ Mature successful projects evolve the software engineering practices necessary t
 * Analyze the project at a high level to understand what sorts of on-ramps were provided for new users. 
 
 # Instructions
-It is assumed the student already has `Vagrant` and `Virtualbox` installed and running on their machine. 
+It is assumed the student already has `Docker` installed and running on their machine. 
 It is also assumed that the student has cloned the course from Github. 
 
 > The shell command prompt is shown as a `$`, sometimes with a machine+directory identifier (e.g. `MacBook-Pro labs$`).
@@ -34,101 +34,76 @@ $ ls
 Vagrantfile         bootstrap-ubuntu.sh readme.MD
 $
 ```
-A Vagrantfile describes the basic virtual machine that the `vagrant` tool will create for us. 
-A quick inspection of the Vagrantfile shows us what it will do. (Lines starting with a '#' are comments.)  
-Essentially it will fetch and build a 'box' of the latest Ubuntu Linux build (ubuntu/focal64 which is the official Canonical build of Focal Fossa). 
-Then it will provision the newly created virtual machine with a shellscript (bootstrap-ubuntu.sh). 
-```
-$ cat Vagrantfile
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/focal64"
-  config.vm.provision :shell, path: "bootstrap-ubuntu.sh"
-end
-$
-```
-
-Let's have a quick look at the provisioning script (`bootstrap-ubuntu.sh`) as well. 
-It does a little housekeeping to ensure the ubuntu packaging databases are up-to-date for when we need to install software later. 
-The `apt` and `apt-get` commands install software in the Ubuntu world. 
-We will be using these commands later to install additional software we need to build the Apache webserver. 
-```
-$ cat bootstrap-ubuntu.sh
-#!/usr/bin/env bash
-
-# Ensure apt-get world is as sane as possible.
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get dist-upgrade -y
-sudo apt-get autoremove -y
-
-# On the vagrant machine ...
-# Set up ntp to keep the vagrant machine in time (vagrant/virtualbox loses sync when some hosts sleep.)
-sudo apt-get -y install ntp ntpdate
-
-# Install git
-sudo apt-get -y install git
-$
-```
 
 Let's start the machine!
 ```
-$ vagrant up
-Bringing machine 'default' up with 'virtualbox' provider...
-==> default: Box 'ubuntu/focal64' could not be found. Attempting to find and install...
-    default: Box Provider: virtualbox
-    default: Box Version: >= 0
-==> default: Loading metadata for box 'ubuntu/focal64'
-...
-lots of output as the virtual machine is started, 
-the box is downloaded and installed, 
-and the new virtual machine provisioned. 
-... 
-    default: Reading package lists...
-    default: Reading package lists...
-    default: Building dependency tree...
-    default: Reading state information...
-    default: Calculating upgrade...
-    default: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-$ 
+$ docker run -it -d -p 8080:80 ubuntu
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+da7391352a9b: Pull complete
+14428a6d4bcd: Pull complete
+2c2d948710f2: Pull complete
+Digest: sha256:c95a8e48bf88e9849f3e0f723d9f49fa12c5a00cfc6e60d2bc99d87555295e4c
+Status: Downloaded newer image for ubuntu:latest
+f1eac0505442d31e4247b94242010e4347b8fadd950326c7d688594d4ac43778
+$
+``` 
+The `docker run` command starts a container. 
+We instructed it to create a container that will have an interactive, terminal connection (`-it`), run as a detached environment (`-d`), mapping the container's port 80 to our port 8080 (`-p 8080:80`), and we want to run the latest Ubuntu Linux release image. 
+Looking at the output, the `ubuntu:latest` image isn't present locally, so docker reaches our to Docker Hub to copy it. 
+At this point, Docker has created a virtual environment. You can view it using `docker ps -a`.
 ```
-At this point we can log into our virtual machine via vagrant. 
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND       CREATED              STATUS              PORTS                  NAMES
+f1eac0505442   ubuntu    "/bin/bash"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp   vigilant_wilson
 ```
-$ vagrant ssh
-Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-56-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Tue Dec  8 06:03:07 UTC 2020
-
-  System load:  0.0               Processes:               112
-  Usage of /:   3.6% of 38.71GB   Users logged in:         0
-  Memory usage: 21%               IPv4 address for enp0s3: 10.0.2.15
-  Swap usage:   0%
-
-
-0 updates can be installed immediately.
-0 of these updates are security updates.
-
-
-vagrant@ubuntu-focal:~$
+The container has a made up name (`vigilant_wilson` in this example) and a container ID. 
+We can attach to the container and login to an interactive shell. 
 ```
+$ docker exec -it vigilant_wilson /bin/bash
+root@f1eac0505442:/#
+``` 
+One thing to note. The `#` symbol at the end of the prompt says this is a root-privileged shell. This means our account is all powerful, and mistakes can be costly. In the real world, we would immediately create a less privileged account on a virtual machine, and then login with that account. 
+As this is a well contained lab on a well contained machine, we will live dangerously. 
 Let's look around. 
 ```
-vagrant@ubuntu-focal:~$ ls -a
-.  ..  .bash_logout  .bashrc  .cache  .profile  .ssh
-vagrant@ubuntu-focal:~$
+root@f1eac0505442:/# ls -a
+.  ..  .dockerenv  bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@f1eac0505442:/# cd home
+root@f1eac0505442:/home# ls 
+root@f1eac0505442:/home#
 ```
 The `-a` option on the `ls` command lists all files including those that start with a `.` that would otherwise be hidden. 
+We have now changed directory (`cd`) to the home directory. It is empty. 
 
+In the Ubuntu linux world, the tool for installing and updating software is `apt`. 
+It keeps track of dependencies required in a database. 
+It also requires that you have super-user privilege to access the database and install the software in our limited environment.
+To do this, we would preface any command requiring 'super-user' privilege with `sudo`, but in our case we have root privilege already, so we will forgoe the `sudo` in this lab. 
+The `apt` and `apt-get` utilities will often prompt for a `Y` to ensure you want to install the software. 
+We will use the `-y` option of the command line to force the affirmative answer. 
+We will need the `curl` utility to copy a file shortly, so let's install it now. 
+`curl` essentially does a copy from a remote URL using the HTTP protocol. 
+Let's update our `apt` and `apt-get` database, and then install `curl`. 
+```
+root@f1eac0505442:/home# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+...
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4248 B]
+Fetched 16.6 MB in 4s (4021 kB/s)
+Reading package lists... Done
+root@f1eac0505442:/home# apt-get install -y curl
+Reading package lists... Done
+Building dependency tree
+...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+Processing triggers for ca-certificates (20201027ubuntu0.20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+root@f1eac0505442:/home#
+```
 ## Fetching Apache
 The first project we want to build as a test of open source goodness is the original Apache webserver (httpd). 
 Finding the project becomes a first test of the community itself. How easy is it to find? 
@@ -149,11 +124,11 @@ Let's use the `curl` utility and the link to the current stable compressed (`gzi
 (As of this writing the current version is 2.4.46.)
 
 ```
-vagrant@ubuntu-focal:~$ curl https://mirrors.gigenet.com/apache//httpd/httpd-2.4.46.tar.gz -o httpd-2.4.46.tar.gz
+root@f1eac0505442:/home/httpd-2.4.46# curl https://mirrors.gigenet.com/apache//httpd/httpd-2.4.46.tar.gz -o httpd-2.4.46.tar.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 9143k  100 9143k    0     0  5846k      0  0:00:01  0:00:01 --:--:-- 5846k
-vagrant@ubuntu-focal:~$ 
+root@f1eac0505442:/home/httpd-2.4.46# 
 ```
 A good habit when dealing with software from new or untrusted sites is to check the SHA256 signature to ensure the file hasn't been tampered with.
 In this case, if you follow the url you will see: 
@@ -163,22 +138,22 @@ In this case, if you follow the url you will see:
 ```
 If we run the `sha256sum` utility that comes with Ubuntu, we can compare the file we just downloaded from the Apache site with their SHA256 signature. 
 ```
-vagrant@ubuntu-focal:~$ sha256sum httpd-2.4.46.tar.gz
+root@f1eac0505442:/home# sha256sum httpd-2.4.46.tar.gz
 44b759ce932dc090c0e75c0210b4485ebf6983466fb8ca1b446c8168e1a1aec2  httpd-2.4.46.tar.gz
-vagrant@ubuntu-focal:~$
+root@f1eac0505442:/home#
 ```
 
 ## Unpacking and building Apache httpd
 Let's unpack the archive. It is a gzip compressed `tar` archive (a common source compression utility and format).
 Once `tar` begins you will see the verbose output listing of all the files unpacked from the archive because we used the `v` option for the extraction (`x`). 
 ```
-vagrant@ubuntu-focal:~$ gunzip httpd-2.4.46.tar.gz
-vagrant@ubuntu-focal:~$ tar xvf httpd-2.4.46.tar
+root@f1eac0505442:/home# gunzip httpd-2.4.46.tar.gz
+root@f1eac0505442:/home# tar xvf httpd-2.4.46.tar
 ... 
 httpd-2.4.46/server/util.c
 httpd-2.4.46/server/util_expr_parse.h
 httpd-2.4.46/server/request.c
-vagrant@ubuntu-focal:~$ 
+root@f1eac0505442:/home# 
 ```
 > **Fun Historical Fact:**
 > `tar` is short for *tape archive*. It is the original archiving tool for UNIX which was instantiated in POSIX.1 standard in 1988. 
@@ -187,40 +162,38 @@ vagrant@ubuntu-focal:~$
 
 Listing the files now shows the tar archive and a directory. Let's step into the directory and list the files. 
 ```
-vagrant@ubuntu-focal:~$ ls
+root@f1eac0505442:/home# ls
 httpd-2.4.46  httpd-2.4.46.tar
-vagrant@ubuntu-focal:~$ cd httpd-2.4.46
-vagrant@ubuntu-focal:~/httpd-2.4.46$ ls
+root@f1eac0505442:/home# cd httpd-2.4.46
+root@f1eac0505442:/home/httpd-2.4.46# ls
 ABOUT_APACHE     CHANGES         LICENSE        README            acinclude.m4     config.layout  httpd.dep   libhttpd.dep  server
 Apache-apr2.dsw  CMakeLists.txt  Makefile.in    README.cmake      ap.d             configure      httpd.dsp   libhttpd.dsp  srclib
 Apache.dsw       INSTALL         Makefile.win   README.platforms  apache_probes.d  configure.in   httpd.mak   libhttpd.mak  support
 BuildAll.dsp     InstallBin.dsp  NOTICE         ROADMAP           build            docs           httpd.spec  modules       test
 BuildBin.dsp     LAYOUT          NWGNUmakefile  VERSIONING        buildconf        emacs-style    include     os
-vagrant@ubuntu-focal:~/httpd-2.4.46$ 
+root@f1eac0505442:/home/httpd-2.4.46# 
 ```
 There is an array of files. From long experience I know there are multiple build files for multiple operating systems. 
 It is probably a good moment to go back to the 'instuctions'. 
 The [**Requirements**](https://httpd.apache.org/docs/current/install.html#requirements) section on the Installation page contains a reference to a list of software that you will need to build Apache.
-In the Ubuntu linux world, the tool for installing and updating software is `apt`. 
-It keeps track of dependencies required in a database. 
-It also requires that you have super-user privilege to access the database and install the software in our limited environment.
-To do this, we preface any command requiring 'super-user' privilege with `sudo`. 
-The `apt` and `apt-get` utilities will often prompt for a `Y` to ensure you want to install the software. 
-We will use the `-y` option of the command line to force the affirmative answer. 
+
 The list of things for us to install according to the [**Requirements**](https://httpd.apache.org/docs/current/install.html#requirements) section looks like the following. 
 (There will be lots of output after each install.)
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y make
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y make-guile
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt install -y gcc
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y libapr1 libapr1-dev   # APR 
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install APR-util                 # and APR-util
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y apache2-dev           # because apparently as you tease it apart we still need this.
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y libpcre3 libpcre3-dev # PCRE
+root@f1eac0505442:/home/httpd-2.4.46# apt install -y make
+root@f1eac0505442:/home/httpd-2.4.46# apt install -y make-guile
+root@f1eac0505442:/home/httpd-2.4.46# apt install -y gcc
+root@f1eac0505442:/home/httpd-2.4.46# apt-get install -y libapr1 libapr1-dev   # APR 
+root@f1eac0505442:/home/httpd-2.4.46# apt-get install APR-util                 # and APR-util
+root@f1eac0505442:/home/httpd-2.4.46# apt-get install -y apache2-dev           # because apparently as you tease it apart we still need this.
+#
+# This step will ask two questions for you to set your TZ appropriately by country and region. 
+#
+root@f1eac0505442:/home/httpd-2.4.46# apt-get install -y libpcre3 libpcre3-dev # PCRE
 ```
 Our machine provisioning installed ntp (Network Time Protocol) and you can confirm you have an appropriate version of Perl by asking for the version.
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ perl --version
+root@f1eac0505442:/home/httpd-2.4.46# perl --version
 
 This is perl 5, version 30, subversion 0 (v5.30.0) built for x86_64-linux-gnu-thread-multi
 (with 50 registered patches, see perl -V for more detail)
@@ -234,7 +207,7 @@ Complete documentation for Perl, including FAQ lists, should be found on
 this system using "man perl" or "perldoc perl".  If you have access to the
 Internet, point your browser at http://www.perl.org/, the Perl Home Page.
 
-vagrant@ubuntu-focal:~/httpd-2.4.46$
+root@f1eac0505442:/home/httpd-2.4.46#
 ```
 Now we will use the `configure` script and `make` utility to build the world. 
 This is often the first place of real trial and error. 
@@ -243,9 +216,9 @@ There are still holes.
 For example, as I read the instructions and tried the configure script, some things still required a little extra searching on the Web.
 (A good example is the need for the installation of `apache2-dev` above.)
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ ./configure
+root@f1eac0505442:/home/httpd-2.4.46# ./configure
 ... lots of output
-vagrant@ubuntu-focal:~/httpd-2.4.46$ make
+root@f1eac0505442:/home/httpd-2.4.46# make
 ... lots more output
 /usr/share/apr-1.0/build/libtool --silent --mode=link x86_64-linux-gnu-gcc  -pthread           -o mod_rewrite.la -rpath /usr/local/apache2/modules -module -avoid-version  mod_rewrite.lo
 make[4]: Leaving directory '/home/vagrant/httpd-2.4.46/modules/mappers'
@@ -255,27 +228,28 @@ make[2]: Entering directory '/home/vagrant/httpd-2.4.46/support'
 make[2]: Leaving directory '/home/vagrant/httpd-2.4.46/support'
 
 make[1]: Leaving directory '/home/vagrant/httpd-2.4.46'
-vagrant@ubuntu-focal:~/httpd-2.4.46$
+root@f1eac0505442:/home/httpd-2.4.46#
 ```
 
 ## Install, Run, Test our Build
 Following along the instructions from the Apache `httpd` page, we use the `make` utility to install the webserver as well.
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo make install
+root@f1eac0505442:/home/httpd-2.4.46# make install
 ... lots happening 
-vagrant@ubuntu-focal:~/httpd-2.4.46$ 
+root@f1eac0505442:/home/httpd-2.4.46# 
 ```
 Before we run the Apache webserver, let's show that it is NOT running. (This will make more sense in a minute.) 
+We will use the `ps` command to show us all the running processes in our virtual environment, and pipe the output to the `grep` command looking for the string `httpd` which is the name of the webserver. We should see that the only command running with that string is the `grep` command itself. 
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ ps aux | grep httpd
+root@f1eac0505442:/home/httpd-2.4.46# ps aux | grep httpd
 vagrant    83851  0.0  0.0   8160   676 pts/0    S+   23:00   0:00 grep --color=auto httpd
-vagrant@ubuntu-focal:~/httpd-2.4.46$
+root@f1eac0505442:/home/httpd-2.4.46#
 ```
 The `ps` command lists all the running processes on a machine (`aux` options are needed to see everything). 
 We piped the output to the `grep` program to find out if there were any processes running `httpd` (the program name of the Apache webserver). 
 Try typing the `ps` command without piping its output. 
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ ps aux
+root@f1eac0505442:/home/httpd-2.4.46# ps aux
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  1.2 103276 12476 ?        Ss   05:32   0:05 /sbin/init
 root           2  0.0  0.0      0     0 ?        S    05:32   0:00 [kthreadd]
@@ -284,31 +258,36 @@ root           3  0.0  0.0      0     0 ?        I<   05:32   0:00 [rcu_gp]
 root       83286  0.0  0.0      0     0 ?        I    22:48   0:00 [kworker/u4:0-events_unbound]
 root       83978  0.0  0.0      0     0 ?        I    23:02   0:00 [kworker/u4:1]
 vagrant    83989  0.0  0.3  10616  3316 pts/0    R+   23:03   0:00 ps aux
-vagrant@ubuntu-focal:~/httpd-2.4.46$
+root@f1eac0505442:/home/httpd-2.4.46#
 ```
 Now start the Apache webserver. 
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo /usr/local/apache2//bin/apachectl -k start
+root@f1eac0505442:/home/httpd-2.4.46# /usr/local/apache2//bin/apachectl -k start
 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
 ```
 And then use `ps` and `grep` to show the running processes. 
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ ps aux | grep httpd
+root@f1eac0505442:/home/httpd-2.4.46# ps aux | grep httpd
 root       84118  0.0  0.3   6216  3940 ?        Ss   23:05   0:00 /usr/local/apache2/bin/httpd -k start
 daemon     84119  0.0  0.4 1211128 4236 ?        Sl   23:05   0:00 /usr/local/apache2/bin/httpd -k start
 daemon     84120  0.0  0.4 1211128 4232 ?        Sl   23:05   0:00 /usr/local/apache2/bin/httpd -k start
 daemon     84121  0.0  0.4 1211128 4232 ?        Sl   23:05   0:00 /usr/local/apache2/bin/httpd -k start
 vagrant    84232  0.0  0.0   8160   736 pts/0    S+   23:06   0:00 grep --color=auto httpd
-vagrant@ubuntu-focal:~/httpd-2.4.46$
+root@f1eac0505442:/home/httpd-2.4.46#
 ```
-Now for the big test! Outside of your `vagrant` environment, point a browser at `http://127.0.0.1:8080/`. 
-The words "It works!" should appear. 
-To convince yourself, edit the text in the base httpd installation back in your `vagrant` environment (to "It still works!").
+Now for the big test! Outside of your `docker` environment, point a browser at `http://127.0.0.1:8080/`. 
+The words "It works!" should appear in the browser window. 
+To convince yourself that this is coming from the virtualized environment, 
+we will overwrite the text in the base httpd installation back in your `docker` environment (to "It still works!").
+
+We will do this with a shell contruct call a HERE-DOCUMENT
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ ls /usr/local/apache2/htdocs
-index.html
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo vi /usr/local/apache2/htdocs/index.html
-vagrant@ubuntu-focal:~/httpd-2.4.46$
+root@f1eac0505442:/home/httpd-2.4.46# cat /usr/local/apache2/htdocs/index.html
+<html><body><h1>It works!</h1></body></html>
+root@f1eac0505442:/home/httpd-2.4.46# echo '<html><body><h1>It still works!</h1></body></html>' >/usr/local/apache2/htdocs/index.html
+root@f1eac0505442:/home/httpd-2.4.46# cat /usr/local/apache2/htdocs/index.html
+<html><body><h1>It still works!</h1></body></html>
+root@f1eac0505442:/home/httpd-2.4.46#
 ```
 Back in your browser window, if your refresh, you should see the new text appear. 
 At this point in history, you have now:
@@ -338,7 +317,7 @@ Different programming languages can solve problems in fewer lines-of-code but th
 To determine the number of lines of code in Apache `httpd`, we will install and use a tool called `cloc`.
 
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo apt-get install -y cloc
+root@f1eac0505442:/home/httpd-2.4.46# apt-get install -y cloc
 Reading package lists... Done
 ...
 vagrant@ubuntu-focal:~/httpd-2.4.46$ cloc .
@@ -381,7 +360,7 @@ Windows Module Definition                1              4              3        
 ---------------------------------------------------------------------------------------
 SUM:                                   990          47762          65731         277587
 ---------------------------------------------------------------------------------------
-vagrant@ubuntu-focal:~/httpd-2.4.46$
+root@f1eac0505442:/home/httpd-2.4.46#
 ```
 ### Boehm's COCOMO Model and Value
 Barry Boehm's COCOMO model has been used for decades to calculate relative effort in time and staff years to create the software based on the lines-of-code. 
@@ -406,22 +385,31 @@ In the space of this lab, you have used and built tens of millions of dollars of
 Let's shutdown our experiment to ensure we can start it again if we need to do so. 
 We will stop the Apache webserver. Then we will exit from our virtual environment. Finally, we will shutdown the virtual machine. 
 ```
-vagrant@ubuntu-focal:~/httpd-2.4.46$ sudo /usr/local/apache2/bin/apachectl -k stop
+root@f1eac0505442:/home/httpd-2.4.46# /usr/local/apache2/bin/apachectl -k stop
 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
-vagrant@ubuntu-focal:~/httpd-2.4.46$ exit
-logout
-Connection to 127.0.0.1 closed.
-$ vagrant halt
-==> default: Attempting graceful shutdown of VM...
-$ 
-```
-At this point we could use `vagrant up` the virtual machine again from this directory (with its `Vagrantfile`) and `vagrant ssh` into the machine and be right back to where we left off. 
+root@f1eac0505442:/home/httpd-2.4.46# exit
+exit
+1$
 
-If you use the `vagrant destroy` command, it will teardown and remove the entire virtual environment, thereby returning your diskspace to you. 
-If you do this extra step, then you will need to rebuild the entire lab to get back to the state where the Apache webserver was built and ready to run. 
 ```
-$ vagrant destroy
-    default: Are you sure you want to destroy the 'default' VM? [y/N] Y
-==> default: Destroying VM and associated drives...
-$
+At this point we are clear of the container environment. 
+The container is still running. You can see it with the `docker ps` command. 
+You can re-connect to the running container by re-executing the `docker exec` command. 
+You can stop the container with a `docker stop` command with the name of the container. 
+```
+1$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND       CREATED             STATUS             PORTS                  NAMES
+f1eac0505442   ubuntu    "/bin/bash"   About an hour ago   Up About an hour   0.0.0.0:8080->80/tcp   vigilant_wilson
+1$ docker exec -it vigilant_wilson  /bin/bash
+root@f1eac0505442:/# cd home
+root@f1eac0505442:/home# ls
+httpd-2.4.46  httpd-2.4.46.tar
+root@f1eac0505442:/home# exit
+exit
+1$ docker stop vigilant_wilson
+vigilant_wilson
+1$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND       CREATED             STATUS                     PORTS     NAMES
+f1eac0505442   ubuntu    "/bin/bash"   About an hour ago   Exited (0) 5 seconds ago             vigilant_wilson
+1$
 ```
