@@ -42,10 +42,8 @@ All files needed for a lab (that aren't downloaded as part of the lab) are in th
 Labs have instructions and tie back to lessons. 
 There may be references in the labs to specific lesson notes, and vice versa. 
 
-As explained in Lab section, you are expected to have `vagrant` and Virtualbox installed on your machine.
-All instructions are based on the Linux command line. (`bash`, `sh`, `ksh` should all work.)
-This means you will need a Linux-like environment on your machine. 
-Windows users can use WSL2 and Mac users can use iTerm2. Linux users can use ... their shell. 
+As explained in Lab section, you are expected to have `Docker` installed on your machine.
+All instructions are based on the Linux command line. (Simple familiarity with `bash`, `sh`, `ksh` all works. We will not be programming in the shell.) 
 You will need to have `git` installed. Again, please see [Setting up for Labs](https://github.com/stephenrwalli/JHU-EN.601.210/tree/main/labs#setting-up-for-labs). 
 
 Assuming you are in your home directory, clone this repo. 
