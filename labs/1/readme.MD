@@ -31,7 +31,7 @@ $ ls
 LICENSE   README.md labs      lessons
 $ cd labs/1
 $ ls
-Vagrantfile         bootstrap-ubuntu.sh readme.MD
+readme.MD
 $
 ```
 
@@ -279,8 +279,7 @@ Now for the big test! Outside of your `docker` environment, point a browser at `
 The words "It works!" should appear in the browser window. 
 To convince yourself that this is coming from the virtualized environment, 
 we will overwrite the text in the base httpd installation back in your `docker` environment (to "It still works!").
-
-We will do this with a shell contruct call a HERE-DOCUMENT
+We will do this by overwriting text with the `echo` command onto the initially displayed file. 
 ```
 root@f1eac0505442:/home/httpd-2.4.46# cat /usr/local/apache2/htdocs/index.html
 <html><body><h1>It works!</h1></body></html>
