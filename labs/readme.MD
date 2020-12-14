@@ -16,7 +16,7 @@ Additionally you will need a UNIX-like command line environment on your computer
 If you are running a Mac, then you can use a tool like iTerm (available here): https://iterm2.com/ 
 
 > On a Windows machine, you can use WSL2, which provides a Linux environment (available here): https://docs.microsoft.com/en-us/windows/wsl/install-win10.
-> However I need to still test whether or not one ends up to many layers of virtualization deep with Docker and WSL ... 
+> However I need to still test whether or not one ends up too many layers of virtualization deep with Docker and WSL ... 
 
 Lastly, having `git` installed will make things easier for labs as you can clone the exercise files directly instead of creating them. 
 The 'git' version control tools are available from here: https://git-scm.com/downloads
@@ -63,3 +63,5 @@ Deleted: sha256:9386795d450ce06c6819c8bc5eff8daa71d47ccb9f9fb8d49fe1ccfb5fb3edbe
 Deleted: sha256:3779241fda7b1caf03964626c3503e930f2f19a5ffaba6f4b4ad21fd38df3b6b
 Deleted: sha256:bacd3af13903e13a43fe87b6944acd1ff21024132aad6e74b4452d984fb1a99a
 $
+```
+You likely will have seen a different set of images deleted. This is just an example. 
