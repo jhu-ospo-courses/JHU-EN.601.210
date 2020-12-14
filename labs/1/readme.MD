@@ -299,8 +299,7 @@ At this point in history, you have now:
 So what? 
 
 ## What about that 125 years of value? 
-The Apache webserver (`httpd`) is still one of the most popular Web engines after 25 years. (It powers [almost a third](https://news.netcraft.com/archives/category/web-server-survey/#:~:text=nginx%20also%20maintains%20its%20lead,of%20active%20sites%20(25.9%25).) of the websites worldwide.)
-According to the Net
+The Apache webserver (`httpd`) is still one of the most popular Web engines after 25 years. (It powers [almost a third](https://news.netcraft.com/archives/category/web-server-survey/#:~:text=nginx%20also%20maintains%20its%20lead,of%20active%20sites%20(25.9%25).) of the websites worldwide according to the [NetCraft survey](https://news.netcraft.com/archives/category/web-server-survey/).)
 
 Let's get a sense of the value that has been created in the software base that we casually built and installed by looking at a rough estimate of lines-of-code (loc) and what that represents in terms of developer value created. 
 
