@@ -377,7 +377,7 @@ But a good rule of thumb is that the loaded cost of an employee is twice their s
 But this is still misleading. 
 The Linux operating system we ran in our virtual machine is all open source licensed and you can '[build it from scratch](http://www.linuxfromscratch.org/)' if you have the inclination. 
 The software development environment (`configure`, `make`, `gcc`, `Perl`) are all open source licensed. 
-Even the `vagrant` virtualization environment is open source licensed. 
+Even the `docker` virtualization environment is open source licensed. 
 In the space of this lab, you have used and built tens of millions of dollars of open source licensed software built in large vibrant communities of developers and software engineers. All of it freely available to use. 
 
 ## Clean up
