@@ -15,8 +15,7 @@ If you experiment with too many virtual machine images, you may discover you run
 Additionally you will need a UNIX-like command line environment on your computer. 
 If you are running a Mac, then you can use a tool like iTerm (available here): https://iterm2.com/ 
 
-> On a Windows machine, you can use WSL2, which provides a Linux environment (available here): https://docs.microsoft.com/en-us/windows/wsl/install-win10.
-> However I need to still test whether or not one ends up too many layers of virtualization deep with Docker and WSL ... 
+On a Windows machine, you can install the Windows Terminal which is a better command line shell, https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
 
 Lastly, having `git` installed will make things easier for labs as you can clone the exercise files directly instead of creating them. 
 The 'git' version control tools are available from here: https://git-scm.com/downloads
