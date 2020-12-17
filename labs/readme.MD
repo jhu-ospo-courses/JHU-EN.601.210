@@ -51,6 +51,9 @@ Once the course is over, you will likely want to clean up all the disk space use
 
 You can see all the Docker containers running, and then remove each container. 
 You can see all the Docker container images as well, and remove them as well. 
+If you are using the `bash` shell on a Mac, you can remove them all in one command as follows. 
+Otherwise, you can remove each container one-at-a-time, after listing them. 
+The same applies for removing container images. 
 ```
 $ docker rm $(docker ps -a -q)
 ... list of removed docker containers by container id ... 
