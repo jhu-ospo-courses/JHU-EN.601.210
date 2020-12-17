@@ -49,11 +49,11 @@ You will need to have `git` installed. Again, please see [Setting up for Labs](h
 Assuming you are in your home directory, clone this repo. 
 (If you organize your directories differently, you should be able to change directory and clone the repo into a different place.)
 
-The shell command prompt is shown as a `$`, sometimes with a machine+directory identifier (e.g. `MacBook-Pro labs$`).
-Expected output then follows (possibly truncated with `...` if there is a lot of output). 
-You are expected to type what follows the `$`, hitting a `<RETURN>` key at the end of the command.
-In the following example, you will type `git clone https://github.com/stephenrwalli/JHU-EN.601.210.git<RETURN>`, see the displayed output, 
-then type `ls<RETURN>`. 
+> The shell command prompt in examples is generally shown as a `$`, sometimes with a machine+directory identifier (e.g. `MacBook-Pro labs$`).
+> Expected output then follows (possibly truncated with `...` if there is a lot of output). 
+> You are expected to type what follows the `$`, hitting a `<RETURN>` key at the end of the command.
+> In the following example, you will type `git clone https://github.com/stephenrwalli/JHU-EN.601.210.git<RETURN>`, see the displayed output, 
+> then type `ls<RETURN>`. 
 
 ```
 $ git clone https://github.com/stephenrwalli/JHU-EN.601.210.git
