@@ -46,7 +46,7 @@ As explained in Lab section, you are expected to have `Docker` installed on your
 All instructions are based on the Linux command line. (Simple familiarity with `bash`, `sh`, `ksh` all works. We will not be programming in the shell.) 
 You will need to have `git` installed. Again, please see [Setting up for Labs](https://github.com/stephenrwalli/JHU-EN.601.210/tree/main/labs#setting-up-for-labs). 
 
-Assuming you are in your home directory, clone this repo. 
+Assuming you are in your home directory, you may choose to clone this repo following the instruction below. 
 (If you organize your directories differently, you should be able to change directory and clone the repo into a different place.)
 
 > The shell command prompt in examples is generally shown as a `$`, sometimes with a machine+directory identifier (e.g. `MacBook-Pro labs$`).
