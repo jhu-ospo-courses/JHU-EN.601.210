@@ -8,7 +8,7 @@ What I mean by being caught in our own biases might better be explained with an 
 
 I hope to draw these memes out across the coming lessons and labs. 
 
-First let’s talk about software because it is important to distinguish when you are debating attributes of software versus a collaborative engineering approach to software development and maintaince or a liberal licensing scheme to account for copyright law which cannot be escaped.
+First let’s look at a set of memes about software because it is important to distinguish when you are debating attributes of software versus a collaborative engineering approach to software development and maintaince or a liberal licensing scheme to account for copyright law which cannot be escaped.
 
 ## Meme #1: We have shared software since we have written software.
 IBM began a computer conference in the late 1950s that continues to this day called SHARE. DEC started in the 1960s and supported the DECUS community, where you could purchase at their conferences (for the cost of the media) mag-tapes full of software that was written and contributed by other people. USENIX began in the 1970s concurrent with the tape distributions of early UNIX releases. But this sharing goes all the way back to work on the first programmable computer in the 1940s at the Princeton Institute of Advanced Studies.
@@ -52,16 +52,17 @@ Some companies using open source think that the project community is a part of t
 The conversations that a company has with its relevant communities versus paying customers are different. Each conversation has specific tools and rules of engagement, and metrics to capture and consider. Community members are incredibly valuable, but they’re not customers.
 
 ## Meme #9 Companies shared liberally-licensed software long before the open source definition.
-Project Athena (X11, Kerberos) began in 1983. The Open Systems Foundation (OSF/Motif, OSF/1) started in 1988. DEC developed Ultrix and Sun Microsystems developed SunOS out of the early BSD releases in the 1980s. Red Hat and SuSE were distributing Linux distributions before the open source defintion (OSD) existed. This is not new behavior.
+Many portray open source software as the amateurs and lone hero-developers creating value, but companies and academic institutions have a long history of creating and participating. Project Athena (X11, Kerberos) began in 1983. The Open Systems Foundation (OSF/Motif, OSF/1) started in 1988. DEC developed Ultrix and Sun Microsystems developed SunOS out of the early BSD releases in the 1980s. Red Hat and SuSE were distributing Linux distributions before the open source defintion (OSD) existed. This is not new behavior.
 
 ## Meme #10 Software freedom and open source licensing are different discussions.
 Arguing about software freedom versus open source software is like debating whether democracy is better than capitalism, or free speech is more important than free markets. They are each important discussions in their own rights, and people often have a natural affinity for one subject or the other, but they are not the same discussion. They are not end points on a continuum. The language of software freedom is defined by the rights of users. The language of open source software is defined by attributes of a license. These are different discussions.
 
 ## Meme #11: Every open source project needs a license.
-Software is covered by copyright law. The license defines how other people can use it. Choose an OSI approved license. The license you choose is a statement about the social contract you want in community. While lots of folks in recent history have defaulted to the Apache Software License as the “business friendly” license, it may not necessarily be so. Reciprocal licenses versus permissive licenses is not a discussion about free software versus open source software. Reciprocal licenses may be the best ecosystem friendly licenses in many cases.
+Software is covered by copyright law. We cannot escape this reality without changing the law. The license defines how other people can use it. Choose an OSI approved license. The license you choose is a statement about the social contract you want in community. While lots of folks in recent history have defaulted to the Apache Software License as the “business friendly” license, it may not necessarily be so. Reciprocal licenses versus permissive licenses is not a discussion about free software versus open source software. Reciprocal licenses may be the best ecosystem friendly licenses in many cases.
 
-## Meme #12: Foundations have their place.
-Non-profits can provide the level-playing field and neutrality of IP ownership that enables dedicated company investment in a well-run open source project.
+## Meme #12: Non-profits have their place.
+Non-profits provide the level-playing field and neutrality of IP ownership that enables dedicated company investment in a well-run open source project. 
+Non-profits remove liability from project maintainers allowing the project to grow. 
 
 As I look back across these memes, I think they’re the same memes I would have written down 20 years ago, but perhaps without the crispness that comes from history and experience. Now, on to the lessons. 
 
