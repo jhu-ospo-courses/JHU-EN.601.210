@@ -35,7 +35,7 @@ Several licensing experiments began in the 1980s and 1990s to enable such collab
 The industry would not think about these licenses as classes of 'open source' licenses until the end of the 1990s, but for 18 years developers and companies continued to share software as they experimented with licenses that enabled such collaboration, just as they had shared software for the previous 30 years before 1980. 
 
 ## Software Freedom, Open Source Software, and the OSD
-One of the early license experiments was started by Richard Stallman at MIT. At the time he couldn’t get access to the source code for a binary executable from a vendor to fix a bug that was causing him grief. In the ensuing battle of wits, Stallman made a declaration of software freedom in the GNU Manifesto (1985), supporting the idea that there were a set of freedoms that every user of software must have. This list eventually evolved into what it is today: 
+One of the early license experiments was started by Richard Stallman at MIT. At the time he couldn’t get access to the source code for a binary executable from a vendor to fix a bug that was causing him grief. In the ensuing battle of wits, Stallman made a declaration of software freedom in the GNU Manifesto (1983), supporting the idea that there were a set of freedoms that every user of software must have. This list eventually evolved into what it is today: 
 
 * The freedom to run the program as you wish, for any purpose (freedom 0).
 * The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). Access to the source code is a precondition for this.
@@ -48,9 +48,24 @@ As a hack on copyright law, the GNU Public License (GPL) supported these freedom
 
 Many other licensing experiments were still underway but Free Software was a movement as well as license. 
 It was also seen as a highly controversial movement at the time. 
-By publishing the software under liberal license (GPL), and forcing 
+By publishing the software under liberal license (GPL), and forcing the publication of all distributed derivatives under the same license, 
+the license potentially became sticky to other peoples' software. At the time, many companies were keeping their software secret believing that would prevent copying (regardless of the license). 
 
-OSD and the Big Tent
+Other experiments were going on at the same time. The Berkeley BSD work and MIT Athena work were growing communities of users. The Perl language was launched as a language to solve lots of automation problems that had required shell scripts and tools like `awk` and `sed`. These are all substantial bodies of work. As the 1990s began and the Internet began to grow, networking stacks and tooling around the IETF protocols began and became collabortative communities. The Apache webserver project (`httpd`) started in 1995 and still drives almost a third of the websites on the Web 25 years later. Linus Torvalds released his fledgling Linux project in 1991 under the GPL and has never looked back. They Python language had been released under a liberal license by Guido van Rossum, as had Tcl/Tk by John Ousterhout. 
+
+By 1998, there was a rich growing community of collaborative communities, all liberally licensing their software under a collection of licenses. Netscape published their Netscape Navigator browser as the Mozilla project in January 1998 marking the first software company to step into the discussion. In April of that year, a group of people met to determine how best to bring the ideas inherent in software freedom into a more commercial discussion. This meeting led to the Open Source Definition (OSD) and the formation of the Open Source Initiative (OSI). 
+
+Starting with the Debian Free Software Guidelines, the OSI focused on the attributes a software license must support to be considered an open source license to produce the Open Source Definition: 
+1. Free Redistribution: The license shall not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license shall not require a royalty or other fee for such sale.
+1. Source Code: The program must include source code, and must allow distribution in source code as well as compiled form. Where some form of a product is not distributed with source code, there must be a well-publicized means of obtaining the source code for no more than a reasonable reproduction cost, preferably downloading via the Internet without charge. The source code must be the preferred form in which a programmer would modify the program. Deliberately obfuscated source code is not allowed. Intermediate forms such as the output of a preprocessor or translator are not allowed.
+1. Derived Works: The license must allow modifications and derived works, and must allow them to be distributed under the same terms as the license of the original software.
+1. Integrity of The Author's Source Code: The license may restrict source-code from being distributed in modified form only if the license allows the distribution of "patch files" with the source code for the purpose of modifying the program at build time. The license must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
+1. No Discrimination Against Persons or Groups: The license must not discriminate against any person or group of persons.
+1. No Discrimination Against Fields of Endeavor: The license must not restrict anyone from making use of the program in a specific field of endeavor. For example, it may not restrict the program from being used in a business, or from being used for genetic research.
+1. Distribution of License: The rights attached to the program must apply to all to whom the program is redistributed without the need for execution of an additional license by those parties.
+1. License Must Not Be Specific to a Product: The rights attached to the program must not depend on the program's being part of a particular software distribution. If the program is extracted from that distribution and used or distributed within the terms of the program's license, all parties to whom the program is redistributed should have the same rights as those that are granted in conjunction with the original software distribution.
+1. License Must Not Restrict Other Software: The license must not place restrictions on other software that is distributed along with the licensed software. For example, the license must not insist that all other programs distributed on the same medium must be open-source software.
+1. License Must Be Technology-Neutral: No provision of the license may be predicated on any individual technology or style of interface.
 
 Attributes of licenses versus freedoms for users.
 
