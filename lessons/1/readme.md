@@ -67,8 +67,19 @@ Starting with the Debian Free Software Guidelines, the OSI focused on the attrib
 1. License Must Not Restrict Other Software: The license must not place restrictions on other software that is distributed along with the licensed software. For example, the license must not insist that all other programs distributed on the same medium must be open-source software.
 1. License Must Be Technology-Neutral: No provision of the license may be predicated on any individual technology or style of interface.
 
-Attributes of licenses versus freedoms for users.
+At the time of the definition of open source software there was a reasonable collection of licenses being used by projects with large vibrant communities of users, contributors, and maintainers. The intent of the people creating the definition was to be as inclusive as possible, building a big tent. The free software definition fits nicely into the open source definition and the lineage to the Debian Free Software Guidelines is clear. 
 
-Ethics versus Engineering. 
+The free software definition is defined in terms of the rights a user must have with respect to the software. The open source definition is defined in terms of attributes of licenses. Surprisingly, the public debate rages on 20+ years later. The simplest way to think about it is that the open source definition concerns itself with developers collaborating in communities on software through the use of liberal licenses, believing the software they build together is inherently better than what a smaller group of developers could build. It's about building good software. Free software on the otherhand, from the writings of the person that first coined the phrase is an ethical imperative for all software to support a good society. 
+
+## Twenty Years After
+The 20+ years since the OSD was first published has continued to see the rise of OSI-licensed software to the point of ubiquity. 
+The Linux operating system is at the heart of an enormous amount of computing. 
+Almost all programming languages and all developer tooling is published under an OSI-approved license. 
+The Internet and the Web run on OSI-licensed software, indeed modern computing in scaled datacenters wouldn't have grown as quickly if not for the LAMP stack (Linux, Apache, MySQL, Perl/PHP/Python). 
+All modern work in Artificial Intelligence and the Internet-of-Things begins as OSI-licensed community projects. 
+
+The rest of this course is going to build on these simple discussions to see why it's so important to be able to understand whether a project is healthy or not, to create your own projects, and to understand how such collaborative communities and liberally licensed software lies at the heart of modern computing. 
+
+
 
 
