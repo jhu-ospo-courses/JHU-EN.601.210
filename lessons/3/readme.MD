@@ -6,10 +6,6 @@
 * Understand the on-ramps and activities successful project communities display
 
 ## Notes
-<<<<<<< HEAD
-
-
-=======
 ### In the beginning ... 
 An open source software project starts when someone publishes source code using an OSI-approved license. 
 But what makes a project a success? 
@@ -44,5 +40,35 @@ Not having one's extensions and fixes accepted back into the main project tree m
 It pays to contribute back any project extenstions. 
 But it also pays to contribute back other artifacts. 
 * Contributing a bug report still helps the project. The bug indicates a new test path or use. While the reporter may not know how to fix the bug, others might. 
-* Contributing new configuration information broadens the user base which 
->>>>>>> 44024bd49445700749dc6566e7a3d27e903c1c26
+* Contributing new configuration information broadens the user base.
+* Contributing documentation (answering forum questions, creating tutorials, etc.) broadens the user base. 
+
+### On ramps 
+I was watching a presentation on building community in an open source project 20 years ago at a USENIX conference. 
+It was a relatively small specialized community of developers working on video drivers for Linux. 
+The presenter offered the following anecdotal observation: for every 1000 users they had, they would receive about 100 bug reports, and about 10 patches, 
+out of which one had read their contribution guidelines. 
+I was sitting with the primary maintainer for a much larger project and they confirmed those numbers seemed about right. 
+
+This orders-of-magnitude measure seems to be more related to communities of people than anything inherent in software development. 
+I have asked rooms full of community managers for a show of hands around the following questions with respect to the neighbourhoods in which they live:
+* How many people have reported potholes in their street or burned out street lamps? Typically about 10% hold up their hands. 
+* How many organize the neighbourhood block party? Typically about 1% hold up their hands. 
+
+All of them identify with living in their neighbourhoods for a wealth of personal reasons from commute time to schools or friends or family. 
+From an open source project perspective, maintainers need to drive three on-ramps into a project: 
+* How to encourage people to use the project? (That is where project maintainers will find bugs reporters and developers.)
+* How to encourage developers selfishly to experiment? (These are the future potential contributors.)
+* How to encourage developers to share their work back to the project? (One can't rely on developers necessarily contributing unless it is easy.)
+
+Another way to cast these questions is: 
+* How to make it easy to install, configure, and use the software project? 
+* How to make it easy for a developer without prior knowledge to build and test the software project to a known state? 
+* How to make it easy to contribute changes back to the project maintainers? 
+
+### Project Activities
+What activities are then necessary to support these on-ramps? 
+
+
+Contributing indirectly still provides benefits as the community of contributors grows. 
+
