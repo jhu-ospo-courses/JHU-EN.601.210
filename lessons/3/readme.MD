@@ -68,6 +68,10 @@ Another way to cast these questions is:
 
 ### Project Activities
 What activities are then necessary to support these on-ramps? 
+We are going to look at the collection of activities through two groups from the perspective of the maintainers:
+* Software construction activities. 
+* Community development activities. 
+![List of activities for building on-ramps in two groups]images/Practices.jpeg
 
 
 Contributing indirectly still provides benefits as the community of contributors grows. 
