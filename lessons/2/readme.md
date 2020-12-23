@@ -12,13 +12,39 @@ This lesson we will go into more of the details of the economics of why open sou
 
 Every product manager and development manager in the software world understands a simple engineering trade-off: build versus buy. 
 Do you build the software you need from scratch, or do you buy it (or license it) for use in the overall solution you are building? 
-Looking at the COCOMO model in Lesson #1 it becomes pretty clear that the creation of complex software is costly. 
+Looking at the COCOMO model in Lab #1 it becomes pretty clear that the creation of complex software is costly. 
 Recognize as well that no software once released remains unchanged. 
 Indeed software is amazingly dynamic, therefore the ongoing maintenance of a body of code is equally costly. 
 
 Open source changes the build versus buy trade-off by adding the idea that there are interesting buckets of software technology from which you can borrow and share. 
 Let's look at an example in some detail that demonstrates the economics. 
+But first let's consider our measurement systems around lines-of-code and Boehm's COCOMO model. 
 
+### Lines-of-code
+Lines-of-code is a metric that every software developer hates and can argue against as a measure of value. The more software you write, the more you learn that refactoring and removing code often improves the program, rather than simply adding more code. One developer may express the solution to a problem in fewer lines of code which tells us nothing with respect to the relative value of the solution in terms of maintainability (readability) or algorithm choice (efficiency) or quality.
+
+But lines-of-code is an interesting relative measure of size. Assuming developers didn't write deliberately naive code to game a metric then the size of a code base is a rough measure of effort. If you explore the literature around software metrics, there are rules of thumb that show up when you average out a code base over a number of developers on a team, and over the period of time it took to create the code base, the values converge roughly. Different programming languages can solve problems in fewer lines-of-code but the ideas still hold.
+
+### Boehm & the COCOMO Model & Value
+Barry Boehm's COCOMO model has been used for decades to calculate relative effort in time and staff years to create the software based on the lines-of-code. 
+There are a number of sites on the Web where you can learn the about the COCOMO model that also provide calculators. (A good site is the Geek for Geeks site: https://www.geeksforgeeks.org/software-engineering-cocomo-model/.) 
+
+1. NASA site: https://strs.grc.nasa.gov/repository/forms/cocomo-calculation/ 
+1. Univeristy of Michigan calculators: http://groups.umd.umich.edu/cis/tinytools/cocomo.html 
+
+Using any of the calculators and the 277,587 lines-of-code from `cloc` gives us a number of developers over a period of months. 
+If you multiply months by developers and divide by 12, you get a number on the order of 135 years of effort. 
+Using other easy cost models for engineering time, you quickly realize the value. 
+Glassdoor claims the average U.S. salary of a software engineer is $120,000 per year. 
+But a good rule of thumb is that the loaded cost of an employee is twice their salary (by the time you factor in benefits, holidays, training, time lost in meetings, etc.). If we use $240,000 per year and 135 years we get $32,400,000 of value. 
+
+But this is still misleading. 
+The Linux operating system we ran in our virtual machine is all open source licensed and you can '[build it from scratch](http://www.linuxfromscratch.org/)' if you have the inclination. 
+The software development environment (`configure`, `make`, `gcc`, `Perl`) are all open source licensed. 
+Even the `docker` virtualization environment is open source licensed. 
+In the space of this lab, you have used and built tens of millions of dollars of open source licensed software built in large vibrant communities of developers and software engineers. All of it freely available to use. 
+
+### A Real Life Example 
 Interix was a product in the late 1990s that provided the UNIX interface on Microsoft Windows NT. 
 The product encompassed approximately 300 software packages covered by roughly 25 licenses, plus a derivative of the Microsoft POSIX subsystem, 
 plus the additional software written by the Interix engineers. 
