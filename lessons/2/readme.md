@@ -1,4 +1,4 @@
-# What IS open source software?
+# The Engineering Economics of Open Source Software (or why we do what we do)
 
 ## Objectives
 * Understand the engineering economics of consuming OSI-licensed projects into one's own software projects.
