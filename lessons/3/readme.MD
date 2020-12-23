@@ -74,6 +74,27 @@ We are going to look at the collection of activities through two groups from the
 
 ![List of activities for building on-ramps in two groups](images/Practices.jpeg)
 
+### Software Construction Activities
+These are the block-and-tackle activities for the maintainers that put in place the infrastructure to make it easy for users to adopt the project, 
+and developers to consume the project and hopefully turn those developers and users into contributors. 
+This list is not meant to be perfect nor comprehensive, 
+but it gives a sense of how certain activities should be considered and their intent. 
+
+1. Project executables are built and available on known platforms. 
+1. Project executable software has an automated installer for known platforms. 
+1. Bugtracking or issue tracking is available. 
+1. Complete source is published and easy to download. 
+1. Project build is automated or scripted for known platforms. 
+1. Project can be tested to a known state for known platforms. 
+1. Project build is sophisticated enough to support easy contributions. 
+1. Project testing is sophisticated enough to support easy contributions. 
+1. Architectural documentation exists as well as roadmap discussions. 
+
+### Community Development Activities 
+These are the building block activities for the maintainers to do that begin to create a sense of community for users, developers, and contributors.   to make it easy for users to adopt the project, 
+and developers to consume the project and hopefully turn those developers and users into contributors. 
+This list is not meant to be perfect nor comprehensive, 
+but it gives a sense of how certain activities should be considered and their intent. 
 
 Contributing indirectly still provides benefits as the community of contributors grows. 
 
