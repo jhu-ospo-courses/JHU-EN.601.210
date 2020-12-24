@@ -23,9 +23,9 @@ By the end of the course, students will:
 1. What IS open source software? (The engineering economics of collaboration.)
 1. What healthy open source software projects look like. (On ramps and selfishness.)
 1. No scale without discipline (Software engineering 101)
-1. I’ve modified my Linux kernel – now what? (Altruism versus greed, software dynamics, and the cost of a fork.)
-1. Governance is not what you think it is (Why voting is problematic and engineers hum in the Internet Engineering Task Force)
 1. What is this madness called licensing and why you might care (a little).
+1. Scaling up even more (The role of non-profits in an open source enabled world)
+1. Governance is not what you think it is (Why voting is problematic and engineers hum in the Internet Engineering Task Force)
 1. Codes of conduct, bad behavior, diversity, and other bits of social science.
 1. Why your open source software startup will fail.
 
