@@ -71,7 +71,7 @@ Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
 Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4248 B]
 Fetched 16.6 MB in 4s (4021 kB/s)
 Reading package lists... Done
-root@f1eac0505442:/home# apt-get install -y curl gcc make 
+root@f1eac0505442:/home# apt-get install -y curl gcc make cloc
 Reading package lists... Done
 Building dependency tree
 ...
