@@ -8,6 +8,7 @@ In this lab, we will use the activities list to test a couple of other projects,
 * Download and build another open source licensed software project from a short list of projects.
 * Evaluate the experience, and evaluate the experience against the list of activities. 
 * Use a couple of other Web resources to further explore the project. 
+* Report on the experience and report on the project versus the criteria list.
 
 ## Instructions
 We are going to treat this as the technical challenge in the Great British Bake-off. 
