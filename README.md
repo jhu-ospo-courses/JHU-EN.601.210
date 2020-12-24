@@ -31,6 +31,7 @@ By the end of the course, students will:
 
 ## Labs
 1. How to build 125 years worth of software value in an afternoon
+1. Evaluating open source licensed projects
 
 ## Getting Started
 This course is meant to be copied into your working directories with `git clone`. 
