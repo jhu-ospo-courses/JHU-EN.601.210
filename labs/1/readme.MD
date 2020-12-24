@@ -1,4 +1,4 @@
-# How to build 125 years worth of software value in an afternoon
+# How to build 125 years worth of software value in an hour or so
 Open source software can be an enormous source of value when you are building other software to solve problems. 
 Well run projects provide welcoming environments for newcomers. 
 Mature successful projects evolve the software engineering practices necessary to allow the software project to deliver value to large user communities and support large developer communities that want to contribute.  
