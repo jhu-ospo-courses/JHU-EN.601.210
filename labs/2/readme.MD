@@ -5,10 +5,8 @@ In Lab 1, we built the Apache webserver from source, following along from a 'fou
 In this lab, we will use the activities list to test a couple of other projects, evaluating the projects (and the activity list). 
 
 ## Objectives
-* Download and build another open source licensed software project from a short list of projects.
-* Evaluate the experience, and evaluate the experience against the list of activities. 
-* Use a couple of other Web resources to further explore the project. 
-* Report on the experience and report on the project versus the criteria list.
+* Evaluate the experience of downloading and building another open source licensed software project from a short list of projects. 
+* Report on the experience using the criteria from Lesson 3. 
 
 ## Instructions
 We are going to treat this as the technical challenge in the Great British Bake-off. 
@@ -17,15 +15,64 @@ Unlike the Bake-off, you are welcome to work together,
 and I'm available to answer questions. 
 Your goal is to produce a simple report that lists the project, your build experience, and evaluates the project you chose against the criteria. 
 
-There is an example of the simple report at the end of this Lab. 
 We are going to use a more simplified list of activities. 
 I do not expect students to be investigating or evaluating complex build environments for contributors. 
 
-Choose one of the following projects. 
+**Choose one of the following projects.**
 1. Perl, a foundational scripting language for systems administration and building (early) dynamic web sites. 
 1. Python, an important programming language in the scientific, machine learning, and research community (and other places). 
 1. Node, a programming environment for server-side javascript programming. 
 1. Semester.ly, tooling used by students at Johns Hopkins and other universities to track their courses with classmates in a web-based service. 
+
+
+### The Report
+The report for your exploration should itemize the following. 
+* Your name 
+* The name of the project you are evaluating
+* Answer the following questions:
+1. Project Website: Provide a URL to the project website. 
+1. Project License: Provide a URL to the project license.
+1. Introductory Documents: Were there getting started documents or tutorials? (Provide any URLs.) 
+1. FAQ: Was there an FAQ? (Provide the URL if you found one.)
+1. User Installation: Does it look like you can install the project executables without building the project from source? (URL?) What platforms are supported? 
+1. Installer Support: What was the installer for your platform? (For example, is there a brew installer for Mac OS?)
+1. Bugtracking/Issues: Does it look like there is bugtracking or issue tracking available? (URL?)
+1. How-to: Are there instructions for how to file a bug/issue for the project? 
+1. Source Availability: Was complete source published and easy to find/download? (URL?) 
+1. Building the Project from Source: Are there good instructions for how to build the project? (URL?) 
+1. Testing to a Known State: Is there a test suite and a way to test the build? (URL?)
+1. Design or Architectural Documentation: Did there appear to be architectural documentation of any kind? A design document? 
+1. Project Communications: Could you find an IRC/Slack channel, any email distribution lists, or forums? 
+(You do not have to join them. If you found a URL/page describing available channels, include it.) 
+1. The Project Mission: Is there a mission statement for the project? (List URL.) 
+1. Code-of-Conduct: Is there a code of conduct? (List URL.) 
+1. Contributions: Could you find getting involved instructions or contribution guidelines? 
+1. Meet-ups and Learning Forums: Can you find reference to any conferences or meet-ups for the project?
+1. Source Code Base: Use `cloc` to determine how big the source code base is. 
+1. Your Evaluation: In purely subjective terms, how did you find the whole experience? 
+
+Email it to me at swalli1 at jh.edu when you are finished. 
+If you worked with anyone else, please include everyone's name on a single report. 
+
+### The Investigation
+The search engine is your friend. 
+Trying simple explicit searches is best. For example:
+1. `<project name> open source`
+1. `build <project name> from source`
+1. `<project name> license`
+1. `<project name> meetup`
+
+While many mature projects have moved to [GitHub](http://www.github.com) from their original forge sites, 
+they often maintain project sites as well as GitHub sites. 
+Some projects pre-date GitHub and have their own rich sites 
+(e.g., Perl has https://www.perl.org/ as well as https://www.cpan.org/ for all of the Perl language plug-ins). 
+
+
+### Trial Builds
+You are expected to follow the build instructions (once found) to see if the instructions are accurate.
+If your build fails at any step in the instructions, then note that failure in your report. 
+Did the build seem to succeed but the testing failed? Note that appropriately. 
+Were you able to still partially build and install? 
 
 Similar to Lab 1, start a clean containerized environment in which you will explore the project. 
 ```
@@ -84,4 +131,5 @@ Running hooks in /etc/ca-certificates/update.d...
 done.
 root@f1eac0505442:/home#
 ```
+
 
