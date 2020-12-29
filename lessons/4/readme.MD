@@ -106,6 +106,18 @@ or a software system published under an OSI-approved open source license that ha
 
 ## Software Hygiene (Washing behind your ears is good practice.)
 
+Tillbrook (1990) introduced his concept of software hygiene as follows: 
+> This paper is concerned with software hygiene, which we feel is similar to personal hygiene, 
+> where software hygiene is the science concerned with maintaining healthy software. 
+> Like personal hygiene, software hygiene is most conspicuous in its absence. 
+> We do not claim that good software hygiene will help you win friends and influence people, 
+> but poor hygiene will certainly cause you to lose clients and discourage users.
+> 
+> Like personal hygiene, software hygiene is largely a matter of simple practices, 
+> the programming equivalent of washing behind your ears and flossing your teeth regularly. 
+> In this paper, we’re going to discuss some of those practices, and (like your mother once did) try to point out some of the dire results of poor
+> hygiene
+
 All the investments that have been made in computer programming and software engineering this past 70 years have been essentially about writing more and better software in fewer lines of ‘code.’  
 
 
