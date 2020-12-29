@@ -93,6 +93,7 @@ Sometimes the system becomes brittle in the sense that making one fix creates mo
 This is generally referred to in the industry as software debt in the sense that one is taking out loans with each small fix, 
 and that one isn't paying down the mounting debt of growing maintainance costs with a redesign and refactor. 
 
+Lienz and Meyer and why it's all about maintainance. 
 
 At no time in this discussion are we talking about open source software per se. 
 We are discussing an attribute of large 'successful' software systems. 
@@ -102,6 +103,8 @@ or a long term  project that is the foundation for a collection of research proj
 or a software system published under an OSI-approved open source license that has broad use and a large community. 
 
 ## Software Hygiene (Washing behind your ears is good practice.)
+
+All the investments that have been made in computer programming and software engineering this past 70 years have been essentially about writing more and better software in fewer lines of ‘code.’  
 
 
 ## Software Construction Activities
