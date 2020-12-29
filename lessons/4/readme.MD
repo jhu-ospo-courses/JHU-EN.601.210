@@ -57,3 +57,47 @@ It also doesn't matter whether the scale is in people using the software, the si
 or the number of people building and delivering the software. 
 In each case, while the tools and practices may be different, one can't scale without discipline. 
 
+## Large Systems of Dynamic Software
+If we look at a large software system, 
+then one can quickly realize that the software is organized so programmers can understand the software in meaningful ways. 
+There is an architecture to the software, possibly expressed in the directory structures, collections of modules and subroutines into libraries, 
+collections of tools or supporting programs together, and the primary functions of the system. 
+The collection and architecture allows a programmer to learn the system as it represents a solution to a problem. 
+It also allows a knowledgeable maintainer to re-orient themselves within the software system. 
+The reason is simple. 
+All complex and interesting software is dynamic. 
+
+Software is inherently dynamic. 
+Once the initial program is created and deployed, it needs to change (immediately) for a variety of reasons.
+Remember that a program is a solution to a problem. It is a malleable machine. 
+The solution will need to evolve and change as the problem (and everyone's understanding of it) evolves and changes :
+* Mistakes are discovered in the program in the way the solution is expressed.
+* Mistakes are discovered in the program based on how it solves the initial requirements. 
+* New requirements are realized, and earlier requirements are no longer needed. 
+* Genuinely new uses for the solution are discovered.
+* Every useful application outlives the platform on which it was developed and deployed. (*Walli's First Law of Applications Portability*)
+* Useful applications seldom live in a vacuum. (*Walli’s Second Law of Applications Portability*)
+
+As the software system evolves, stresses will also occur in the system's architecture. 
+Every system will reach points in its evolution where it will need to be refactored, 
+i.e., redesigned, broken apart, reassembled with new abstration layers to support growth. 
+
+At the same time, there are additional stresses on the team of maintainers themselves.
+Often, short-term fixes are applied. 
+When a mistake is discovered, if it can be fixed quickly, the ...
+
+
+## Software Construction Activities
+Let's go back to the block-and-tackle activities that the maintainers on large successful projects put in place.
+Let's look at them through lenses of the on-ramps but re-order them to software development, then deployment and use. 
+
+Project executables are built and available on known platforms.
+Project executable software has an automated installer for known platforms.
+Bugtracking or issue tracking is available.
+Complete source is published and easy to download.
+Project build is automated or scripted for known platforms.
+Project can be tested to a known state for known platforms.
+Project build is sophisticated enough to support easy contributions.
+Project testing is sophisticated enough to support easy contributions.
+Architectural documentation exists as well as roadmap discussions.
+
