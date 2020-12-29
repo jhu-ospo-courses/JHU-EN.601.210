@@ -93,7 +93,9 @@ Sometimes the system becomes brittle in the sense that making one fix creates mo
 This is generally referred to in the industry as software debt in the sense that one is taking out loans with each small fix, 
 and that one isn't paying down the mounting debt of growing maintainance costs with a redesign and refactor. 
 
-Lienz and Meyer and why it's all about maintainance. 
+In studies going back to Lientz (1979) and Meyer (1988), these changes were thought to account for 70% of the 'cost' of developing the software.
+Two thirds of that cost was involved in direct, premeditated changes due to evolving requirements and data format changes. 
+Any work done to manage change can reduce the cost of the overall software system.  
 
 At no time in this discussion are we talking about open source software per se. 
 We are discussing an attribute of large 'successful' software systems. 
