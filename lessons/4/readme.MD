@@ -8,17 +8,17 @@
 ## Notes
 The Institure of Electrical and Electronic Engineers (IEEE) define software engineering as follows: 
 
-**software engineering.** (1) The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software; 
-that is, the application of engineering to software. (2) The study of approaches as in (1).
+> **software engineering.** (1) The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software; 
+> that is, the application of engineering to software. (2) The study of approaches as in (1).
 
 Unfortunately, the same IEEE Glossary standard defines engineering as follows: 
 
-**engineering.** The application of a systematic, disciplined, quantifiable approach to structures, machines, products, systems, or processes. 
+> **engineering.** The application of a systematic, disciplined, quantifiable approach to structures, machines, products, systems, or processes. 
 
 This definition doesn't really give one a sense of why that practice is needed or necessary. 
 Looking a little more broadly doesn't help. The Oxford English Dictionary gives us: 
 
-**engineering.** the activity of applying scientific knowledge to the design, building and control of machines, roads, bridges, electrical equipment, etc.
+> **engineering.** the activity of applying scientific knowledge to the design, building and control of machines, roads, bridges, electrical equipment, etc.
 
 To give you a sense of how to think about engineering in general and software engineering specifically, it helps to use some examples. 
 At dinner with a chemical engineer once, I asked what does a chemical engineer do. 
