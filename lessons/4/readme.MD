@@ -83,8 +83,25 @@ Every system will reach points in its evolution where it will need to be refacto
 i.e., redesigned, broken apart, reassembled with new abstration layers to support growth. 
 
 At the same time, there are additional stresses on the team of maintainers themselves.
-Often, short-term fixes are applied. 
-When a mistake is discovered, if it can be fixed quickly, the ...
+Often, short-term fixes are applied to correct mistakes. 
+These short-term fixes are sometimes rough patches to the software to get something to work quickly because of the urgency required,
+or because the cost of the quick fix is low compared to spending a lot of developer time looking for a larger problem. 
+Over time these patches start to hide the original architecture of the solution. 
+Each decision, each fix, each patch is done for a perfectly good reason, 
+but the cumulative decisions begin to create a brittle architecture where it becomes harder and more costly to make subsequent changes. 
+Sometimes the system becomes brittle in the sense that making one fix creates more problems. 
+This is generally referred to in the industry as software debt in the sense that one is taking out loans with each small fix, 
+and that one isn't paying down the mounting debt of growing maintainance costs with a redesign and refactor. 
+
+
+At no time in this discussion are we talking about open source software per se. 
+We are discussing an attribute of large 'successful' software systems. 
+They could be bespoke solutions deployed in a company by the IT development staff, 
+or a large complex software product developed and sold by a company, 
+or a long term  project that is the foundation for a collection of research projects, 
+or a software system published under an OSI-approved open source license that has broad use and a large community. 
+
+## Software Hygiene (Washing behind your ears is good practice.)
 
 
 ## Software Construction Activities
