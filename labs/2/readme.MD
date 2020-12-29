@@ -65,7 +65,8 @@ Trying simple explicit searches is best. For example:
 While many mature projects have moved to [GitHub](http://www.github.com) from their original forge sites, 
 they often maintain project sites as well as GitHub sites. 
 Some projects pre-date GitHub and have their own rich sites 
-(e.g., Perl has https://www.perl.org/ as well as https://www.cpan.org/ for all of the Perl language plug-ins). 
+(e.g., Perl has https://www.perl.org/ as well as https://www.cpan.org/ for all of the Perl language plug-ins and the Perl source, 
+and they also have a GitHub site https://github.com/Perl/perl5). 
 
 
 ### Trial Builds
@@ -131,5 +132,5 @@ Running hooks in /etc/ca-certificates/update.d...
 done.
 root@f1eac0505442:/home#
 ```
-
+At this point, you have a basic Ubuntu machine on which to test build the project, you are logged into it, and you can use `apt-get` to pull any other tooling you might need. 
 
