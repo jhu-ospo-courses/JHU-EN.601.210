@@ -31,3 +31,16 @@
 * Evaluate the experience, and evaluate the experience against the list of activities.
 * Use a couple of other Web resources to further explore the project.
 * Report on the experience and report on the project versus the criteria list.
+
+## Lesson 4: No scale without discipline (Software Engineering 101)
+### Objectives
+* Understand the difference between programming-in-the-small and large systems programming.
+* Be able to explain the basic practices that are needed to deliver software at scale, and why they are needed.
+* Understand how to apply these ideas back to open source software projects as learning experiences, and as criteria for judging project health.
+
+## Lesson 5: What is this madness called licensing and why you might care (a little)
+### Objectives
+* Understand the (very) simple basics of intellectual property protection
+* Be able to explain the basic license groups in the free and open source software space
+* Know the basic licenses, and where to find more data
+* Have some understanding of current controversies and the implications in an open source community
