@@ -17,6 +17,7 @@ By the end of the course, students will:
 * Be able to identify healthy open source projects and tools they can use in their projects and research without compromising their work. 
 * Have an approach to download, build, and use an open source project, and make modifications for their own use. 
 * Understand the difference between programming in the small, and the tooling and process to support software engineering at scale. 
+* Be aware of the high-level business and people issues (ownership, licenses, non-profits, community) 
 
 All of the objectives of individual lessons and labs are collected together [here](https://github.com/jhu-ospo-courses/JHU-EN.601.210/blob/main/objectives.md). 
    
