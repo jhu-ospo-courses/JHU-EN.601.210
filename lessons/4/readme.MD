@@ -93,7 +93,7 @@ Sometimes the system becomes brittle in the sense that making one fix creates mo
 This is generally referred to in the industry as software debt in the sense that one is taking out loans with each small fix, 
 and that one isn't paying down the mounting debt of growing maintainance costs with a redesign and refactor. 
 
-In studies going back to Lientz (1979) and Meyer (1988), these changes were thought to account for 70% of the 'cost' of developing the software.
+In studies going back to Lientz (1979) and Meyer (1988), these changes were thought to account for 70% of the cost of developing the software.
 Two thirds of that cost was involved in direct, premeditated changes due to evolving requirements and data format changes. 
 Any work done to manage change can reduce the cost of the overall software system.  
 
@@ -118,20 +118,36 @@ Tillbrook (1990) introduced his concept of software hygiene as follows:
 > In this paper, we’re going to discuss some of those practices, and (like your mother once did) try to point out some of the dire results of poor
 > hygiene
 
-All the investments that have been made in computer programming and software engineering this past 70 years have been essentially about writing more and better software in fewer lines of ‘code.’  
+Tillbrook articulated his ideas of software hygiene in the same year as the 
+IEEE Glossary standard that gave us our definition of software engineering was ratified.
+This was also a period of rampant sharing of software across a fledgling Internet amongst UNIX systems developers.
+Many of the projects that came to dominate as examples of well-run open source and free software projects came from this broad community of developers. 
+This period of the mid-1980s through mid-1990s saw the rise of discussions on developing and delivering software at scale. 
+Software hygience was one such discussion in this space, 
+and articulated a set of practices around reliable, repeatable, testable builds, 
+and all developers on a project having a shared, complete, and consistent view of the practices needed to deliver on such builds. 
 
 
 ## Software Construction Activities
-Let's go back to the block-and-tackle activities that the maintainers on large successful projects put in place.
-Let's look at them through lenses of the on-ramps but re-order them to software development, then deployment and use. 
+This starts to look a lot like the framework for investigating successful open source licensed software projects. 
+Remember it is all about scale:
+* scale in the number of active participants so everyone understands the expectations and practices for their role,
+* scale in the size of the software project where automation reduces errors in deliverables (across platforms),
+* scale in the community of use in the project, such that consistent deliverables must be made and expectations set.
 
-Project executables are built and available on known platforms.
-Project executable software has an automated installer for known platforms.
-Bugtracking or issue tracking is available.
-Complete source is published and easy to download.
-Project build is automated or scripted for known platforms.
-Project can be tested to a known state for known platforms.
-Project build is sophisticated enough to support easy contributions.
-Project testing is sophisticated enough to support easy contributions.
-Architectural documentation exists as well as roadmap discussions.
+All the investments that have been made in computer programming and software engineering this past 70 years have been essentially about writing more and better software in fewer lines of ‘code.’  
+
+Let's go back to the block-and-tackle activities that the maintainers on large successful projects put in place.
+Let's look at them through the lens of software engineering activities:
+
+* Project executables are built and available on known platforms.
+* Project executable software has an automated installer for known platforms.
+* Bugtracking or issue tracking is available.
+* Complete source is published and easy to download.
+* Project build is automated or scripted for known platforms.
+* Project can be tested to a known state for known platforms.
+* Project build is sophisticated enough to support easy contributions.
+* Project testing is sophisticated enough to support easy contributions.
+* Architectural documentation exists as well as roadmap discussions.
+
 
