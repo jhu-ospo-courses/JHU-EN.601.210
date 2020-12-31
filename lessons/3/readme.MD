@@ -41,7 +41,9 @@ It pays to contribute back any project extenstions.
 But it also pays to contribute back other artifacts. 
 * Contributing a bug report still helps the project. The bug indicates a new test path or use. While the reporter may not know how to fix the bug, others might. 
 * Contributing new configuration information broadens the user base.
-* Contributing documentation (answering forum questions, creating tutorials, etc.) broadens the user base. 
+* Contributing documentation (answering forum questions, creating tutorials, etc.) broadens the user and developer base. 
+* Forum time answering questions broadens the user and developer base.
+* Translations (program text strings e.g., error messages, as well as documentation). 
 
 ### On-ramps 
 I was watching a presentation on building community in an open source project 20 years ago at a conference. 
