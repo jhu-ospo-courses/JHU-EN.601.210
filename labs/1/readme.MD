@@ -221,13 +221,13 @@ root@f1eac0505442:/home/httpd-2.4.46# ./configure
 root@f1eac0505442:/home/httpd-2.4.46# make
 ... lots more output
 /usr/share/apr-1.0/build/libtool --silent --mode=link x86_64-linux-gnu-gcc  -pthread           -o mod_rewrite.la -rpath /usr/local/apache2/modules -module -avoid-version  mod_rewrite.lo
-make[4]: Leaving directory '/home/vagrant/httpd-2.4.46/modules/mappers'
-make[3]: Leaving directory '/home/vagrant/httpd-2.4.46/modules/mappers'
-make[2]: Leaving directory '/home/vagrant/httpd-2.4.46/modules'
-make[2]: Entering directory '/home/vagrant/httpd-2.4.46/support'
-make[2]: Leaving directory '/home/vagrant/httpd-2.4.46/support'
+make[4]: Leaving directory '/home/httpd-2.4.46/modules/mappers'
+make[3]: Leaving directory '/home/httpd-2.4.46/modules/mappers'
+make[2]: Leaving directory '/home/httpd-2.4.46/modules'
+make[2]: Entering directory '/home/httpd-2.4.46/support'
+make[2]: Leaving directory '/home/httpd-2.4.46/support'
 
-make[1]: Leaving directory '/home/vagrant/httpd-2.4.46'
+make[1]: Leaving directory '/home/httpd-2.4.46'
 root@f1eac0505442:/home/httpd-2.4.46#
 ```
 
@@ -242,7 +242,7 @@ Before we run the Apache webserver, let's show that it is NOT running. (This wil
 We will use the `ps` command to show us all the running processes in our virtual environment, and pipe the output to the `grep` command looking for the string `httpd` which is the name of the webserver. We should see that the only command running with that string is the `grep` command itself. 
 ```
 root@f1eac0505442:/home/httpd-2.4.46# ps aux | grep httpd
-vagrant    83851  0.0  0.0   8160   676 pts/0    S+   23:00   0:00 grep --color=auto httpd
+root       83851  0.0  0.0   8160   676 pts/0    S+   23:00   0:00 grep --color=auto httpd
 root@f1eac0505442:/home/httpd-2.4.46#
 ```
 The `ps` command lists all the running processes on a machine (`aux` options are needed to see everything). 
@@ -257,7 +257,7 @@ root           3  0.0  0.0      0     0 ?        I<   05:32   0:00 [rcu_gp]
 ... 
 root       83286  0.0  0.0      0     0 ?        I    22:48   0:00 [kworker/u4:0-events_unbound]
 root       83978  0.0  0.0      0     0 ?        I    23:02   0:00 [kworker/u4:1]
-vagrant    83989  0.0  0.3  10616  3316 pts/0    R+   23:03   0:00 ps aux
+root       83989  0.0  0.3  10616  3316 pts/0    R+   23:03   0:00 ps aux
 root@f1eac0505442:/home/httpd-2.4.46#
 ```
 Now start the Apache webserver. 
@@ -272,7 +272,7 @@ root       84118  0.0  0.3   6216  3940 ?        Ss   23:05   0:00 /usr/local/ap
 daemon     84119  0.0  0.4 1211128 4236 ?        Sl   23:05   0:00 /usr/local/apache2/bin/httpd -k start
 daemon     84120  0.0  0.4 1211128 4232 ?        Sl   23:05   0:00 /usr/local/apache2/bin/httpd -k start
 daemon     84121  0.0  0.4 1211128 4232 ?        Sl   23:05   0:00 /usr/local/apache2/bin/httpd -k start
-vagrant    84232  0.0  0.0   8160   736 pts/0    S+   23:06   0:00 grep --color=auto httpd
+root       84232  0.0  0.0   8160   736 pts/0    S+   23:06   0:00 grep --color=auto httpd
 root@f1eac0505442:/home/httpd-2.4.46#
 ```
 Now for the big test! Outside of your `docker` environment, point a browser at `http://127.0.0.1:8080/`. 
@@ -318,7 +318,7 @@ To determine the number of lines of code in Apache `httpd`, we will install and 
 root@f1eac0505442:/home/httpd-2.4.46# apt-get install -y cloc
 Reading package lists... Done
 ...
-vagrant@ubuntu-focal:~/httpd-2.4.46$ cloc .
+root@f1eac0505442:/home/httpd-2.4.46# cloc .
     3177 text files.
     3006 unique files.
     2337 files ignored.
