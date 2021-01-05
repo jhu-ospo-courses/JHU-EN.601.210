@@ -131,17 +131,19 @@ root@f1eac0505442:/home/httpd-2.4.46# curl https://mirrors.gigenet.com/apache//h
 root@f1eac0505442:/home/httpd-2.4.46# 
 ```
 A good habit when dealing with software from new or untrusted sites is to check the SHA256 signature to ensure the file hasn't been tampered with.
-In this case, if you follow the url you will see: 
-```
-44b759ce932dc090c0e75c0210b4485ebf6983466fb8ca1b446c8168e1a1aec2 *httpd-2.4.46.tar.gz
-
-```
 If we run the `sha256sum` utility that comes with Ubuntu, we can compare the file we just downloaded from the Apache site with their SHA256 signature. 
 ```
 root@f1eac0505442:/home# sha256sum httpd-2.4.46.tar.gz
 44b759ce932dc090c0e75c0210b4485ebf6983466fb8ca1b446c8168e1a1aec2  httpd-2.4.46.tar.gz
 root@f1eac0505442:/home#
 ```
+In this case, if you follow the SHA256 url on the Apache download page you will see: 
+```
+44b759ce932dc090c0e75c0210b4485ebf6983466fb8ca1b446c8168e1a1aec2 *httpd-2.4.46.tar.gz
+
+```
+The SHA256 checksum from your download should be identical to what the website says you should see.
+This means you can have confidence the file wasn't tampered with or corrupted. 
 
 ## Unpacking and building Apache httpd
 Let's unpack the archive. It is a gzip compressed `tar` archive (a common source compression utility and format).
