@@ -14,8 +14,11 @@ Using inbound contributions rather than outbound use is a very deliberate perspe
 If we think about outbound uses and users, it can be difficult to count. 
 * Did someone star a GitHub repo because they are a simple end user, or because they follow the developer, or because they are a developer using the source? 
 * Did someone clone/fork a repo and use it, or abandon the project fork, or simply review and learn from it? 
+* Counting downloads is prone to similar problems.
 
-If we look at an inbound contribution flow, regardless of what we count as a contribution, then we have some confidence that the contributor is an active user. 
+If we look at an inbound contribution flow, regardless of what we count as a contribution, then we have some confidence that the contributor is an active user.
+One of the ideas we will work on today, however, is that the observed structure of the project is more important than a sometimes arbitrary metric. 
+
 Let's look at some simple role definitions:
 * Maintainer: a primary author of a project with full privileges to write the project directory tree. 
 * User: any person that is using a software project for its intended purpose.
