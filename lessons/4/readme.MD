@@ -62,7 +62,7 @@ If we look at a large software system,
 then one can quickly realize that the software is organized so programmers can understand the software in meaningful ways. 
 There is an architecture to the software, possibly expressed in the directory structures, collections of modules and subroutines into libraries, 
 collections of tools or supporting programs together, and the primary functions of the system. 
-The collection and architecture allows a programmer to learn the system as it represents a solution to a problem. 
+The collection and architecture should allow a programmer to learn the system as it represents a solution to a problem. 
 It also allows a knowledgeable maintainer to re-orient themselves within the software system. 
 The reason is simple. 
 All complex and interesting software is dynamic. 
@@ -70,7 +70,7 @@ All complex and interesting software is dynamic.
 Software is inherently dynamic. 
 Once the initial program is created and deployed, it needs to change (immediately) for a variety of reasons.
 Remember that a program is a solution to a problem. It is a malleable machine. 
-The solution will need to evolve and change as the problem (and everyone's understanding of it) evolves and changes :
+The solution will need to evolve and change as the problem (and everyone's understanding of it) evolves and changes:
 * Mistakes are discovered in the program in the way the solution is expressed.
 * Mistakes are discovered in the program based on how it solves the initial requirements. 
 * New requirements are realized, and earlier requirements are no longer needed. 
@@ -87,7 +87,7 @@ Often, short-term fixes are applied to correct mistakes.
 These short-term fixes are sometimes rough patches to the software to get something to work quickly because of the urgency required,
 or because the cost of the quick fix is low compared to spending a lot of developer time looking for a larger problem. 
 Over time these patches start to hide the original architecture of the solution. 
-Each decision, each fix, each patch is done for a perfectly good reason, 
+Each decision, each fix, each patch may be done for a perfectly good reason, 
 but the cumulative decisions begin to create a brittle architecture where it becomes harder and more costly to make subsequent changes. 
 Sometimes the system becomes brittle in the sense that making one fix creates more problems. 
 This is generally referred to in the industry as software debt in the sense that one is taking out loans with each small fix, 
@@ -95,7 +95,7 @@ and that one isn't paying down the mounting debt of growing maintainance costs w
 
 In studies going back to Lientz (1979) and Meyer (1988), these changes were thought to account for 70% of the cost of developing the software.
 Two thirds of that cost was involved in direct, premeditated changes due to evolving requirements and data format changes. 
-Any work done to manage change can reduce the cost of the overall software system.  
+Any work done to the processes of developing and delivering software to manage change can reduce the cost of the overall software system.  
 
 At no time in this discussion are we talking about open source software per se. 
 We are discussing an attribute of large 'successful' software systems. 
@@ -127,27 +127,47 @@ Software hygience was one such discussion in this space,
 and articulated a set of practices around reliable, repeatable, testable builds, 
 and all developers on a project having a shared, complete, and consistent view of the practices needed to deliver on such builds. 
 
-
 ## Software Construction Activities
 This starts to look a lot like the framework for investigating successful open source licensed software projects. 
 Remember it is all about scale:
-* scale in the number of active participants so everyone understands the expectations and practices for their role,
-* scale in the size of the software project where automation reduces errors in deliverables (across platforms),
-* scale in the community of use in the project, such that consistent deliverables must be made and expectations set.
-
-All the investments that have been made in computer programming and software engineering this past 70 years have been essentially about writing more and better software in fewer lines of ‘code.’  
+* scale in the number of active participants so everyone understands the expectations and practices for their role (maintainer, contributor),
+* scale in the size of the software system where automation reduces errors in consistent deliverables (across platforms),
+* scale in the community of use so everyone understands the expectations and practices for their role (user, developer).
 
 Let's go back to the block-and-tackle activities that the maintainers on large successful projects put in place.
 Let's look at them through the lens of software engineering activities:
 
-* Project executables are built and available on known platforms.
-* Project executable software has an automated installer for known platforms.
-* Bugtracking or issue tracking is available.
-* Complete source is published and easy to download.
+* Consistent executables are built and available on known platforms.
 * Project build is automated or scripted for known platforms.
+* Project executable software has an automated installer for known platforms.
+* Complete source is published and easy to download.
+* Software source can be navigated to aid understanding. 
 * Project can be tested to a known state for known platforms.
-* Project build is sophisticated enough to support easy contributions.
-* Project testing is sophisticated enough to support easy contributions.
-* Architectural documentation exists as well as roadmap discussions.
+* Bugtracking or issue tracking is available.
+* Procedures for bug reports, bug triage, new feature requests, contributions (code, docs, tests, etc.) are documented, up-to-date, 
+so everyone engaged has their expectations set.
 
+For larger communities with larger contribution flow
+* Project build is sophisticated enough to support easy contributions (e.g. CI/CD pipeline support, linting, compliance scanning, etc.).
+* Project testing is sophisticated enough to support easy contributions as part of a build pipeline. 
+* Architectural documentation exists as well as roadmap discussions, and how roadmap decisions are made is transparent and clear. 
 
+Community development activities are not to be left out of consideration. 
+Every complex software system (bespoke, product, or project) needs ways to set expectations, introduce new users, and capture feedback. 
+These practices are sometimes talked about as product training and end-user documentation, 
+but they are all part of the on-ramp to build that software 'community'.
+* The project license is easy to find as this is the outbound statement from maintainers on how they share.
+* There is easy on-boarding documentation like a Frequently Asked Questions (FAQ), How-to documents, or startup tutorials. 
+* There is an easy engagement mechanism like an IRC channel, email distribution list, or forum. 
+* There is a mission statement that is clear.
+* There is a Code-of-Conduct. 
+* There is a well-organized communications 'platform' where there is clear direction on what channels to use for what purpose. 
+* There are contribution guidelines.
+* The project governance is well documented. 
+* There are real world events such as conference Birds-of-a-Feather (BoF) gatherings, or Meet-ups. 
+
+All of these activities enable a project maintainer team to grow and scale, 
+and to manage the growth and scale of the ever changing software system, 
+and the growing base of users, developers, and contributors that come with a well organized OSI-licensed project. 
+There is no scale without the disciplined activities, and if those activities aren't put in place, 
+the growth stress may become too much and the project suffers for it. 
