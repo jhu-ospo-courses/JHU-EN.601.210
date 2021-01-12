@@ -31,6 +31,7 @@ All of the objectives of individual lessons and labs are collected together [her
 1. Governance is not what you think it is (Why voting is problematic and engineers hum in the Internet Engineering Task Force)
 1. Codes of conduct, bad behavior, diversity, and other bits of social science.
 1. Why your open source software startup will fail.
+1. AMA (Ask Me Anything) with two engineers from a major industry open source project
 
 ## Labs
 1. How to build 125 years worth of software value in an afternoon
