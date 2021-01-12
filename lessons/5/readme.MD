@@ -9,6 +9,7 @@
 ## Notes
 > 
 > **IANAL** It is important to understand and remember that I am not a lawyer. This is not legal advice. 
+> This experience is based in the U.S. and your mileage may vary.
 > 
 ### Everything you need to know about licensing in 2 minutes 
 
@@ -49,7 +50,7 @@ A very good reference for developers is Van Lindberg's
 
 If you think you need an opinion on software patents, then you are (again) admitting that you probably need to talk to an attorney or read the book.
 
-That's it. There's the two minute class.  (If you read quickly, it was over faster.)
+That's it. There's the two minute lesson.  (If you read quickly, it was over faster.)
 
 Any other discussion is window-dressing if you write software for a living or for other people to use. 
 If you want folks to use your software, license your work. Writers do it. Artists do it. Engineers and architects do it.  
@@ -57,21 +58,15 @@ So should you.
 
 ### A longer discussion about which open source software license should you use? 
 
-I’ve recently been involved in several discussions that are variations on, "Which open source or free software license should I choose for my project?" 
-Here is my way of looking at the large and growing collection of licenses in the wild. 
-First, let's make sure we all understand that I Am Not A Lawyer. This is not legal advice. 
-Depending upon your needs and your comfort with risk around your software, you'll want to confirm your legal choices with counsel in your jurisdiction.
-
 The first and obvious consideration is whether or not the license is approved as an open source license by the Open Source Initiative (OSI). 
 The OSI created the Open Source Definition in the late 1990s as a set of attributes that a software license must support to be considered "open source." 
 Anyone can take a license to the OSI for debate and discussion and if approved as meeting the OSD, then the license is added to the canonical list.
 
-While this seems an obvious place to start, I was recently surprised to discover a license called the "Clear BSD License." 
-It attempts to clarify explicitly that patents are not being discussed in the license. 
-It is not on the OSI list (while the New BSD and Simplified BSD licenses are) and is therefore not worth considering. 
+While this seems an obvious place to start, 
+you will still see situations where a corporate lawyer has taken an approved license and made a few 'minor' edits for clarification. 
 Inventing new licenses as small derivatives of existing licenses is not helpful and creates costly legal busy work. 
 There exists a broad collection of OSI-approved licenses today. 
-These licenses cover millions of lines of software involved in billions of dollars in procurement. 
+These licenses cover hundreds of millions of lines of software involved in billions of dollars in procurement. 
 One would be hard pressed to describe a serious set of circumstances that isn’t already covered by an OSI-approved license.
 
 There are several big levers available when considering an open source license:
