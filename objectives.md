@@ -52,3 +52,4 @@
 * Understand how a non-profit can enable and encourage the next wave of growth 
 * Have some understanding of current challenges in the non-profit space
 
+
