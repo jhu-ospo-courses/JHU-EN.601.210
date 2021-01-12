@@ -11,14 +11,14 @@
 ### Everything you need to know about licensing in 2 minutes 
 
 * Software is protected by copyright law in the U.S. and many other countries.
-* Anyone that wrote the software, owns the copyright and can say how it is used. [NOT saying how it can be used does NOT remove your responsibility as the owner, even if you don't care.]
+* Anyone that wrote the software, owns the copyright and can say how it is used. [**NOT** saying how it can be used does **NOT** remove your responsibility as the owner, even if you don't care.]
 * People sometimes give up their copyright ownership to the software they write in their employment agreements. [If you didn't read your employment agreement, you're probably not a professional software developer.]
 * If you want to liberally share your software with others so they can use it for anything, there are a few well-accepted SIMPLE licenses (Apache 2.0, BSD, MIT). 
 These essentially say:
-1. Do whatever you want with the software.
-1. Don't claim my work as your own.
-1. Do give me credit for my work.
-1. THIS SOFTWARE COMES WITH NO WARRANTIES, USE AT YOUR OWN RISK, [ALL IN CAPITAL LETTERS BECAUSE WE REALLY REALLY MEAN IT].
+** Do whatever you want with the software.
+** Don't claim my work as your own.
+** Do give me credit for my work.
+** THIS SOFTWARE COMES WITH NO WARRANTIES, USE AT YOUR OWN RISK, [ALL IN CAPITAL LETTERS BECAUSE WE REALLY REALLY MEAN IT].
 
 It takes about two minutes each to read the [Apache 2.0](https://opensource.org/licenses/Apache-2.0), 
 [BSD](https://opensource.org/licenses/BSD-3-Clause), 
