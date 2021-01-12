@@ -80,6 +80,7 @@ and to remove liability from the maintainers as individuals.
 
 ![List of new activities for building a commercial on-ramp](images/NewPractices.jpeg)
 
+This essentially creates the fourth on-ramp for commercial participation to enable the next wave of growth. 
 
 
 
