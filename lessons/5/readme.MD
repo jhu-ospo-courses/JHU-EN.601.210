@@ -8,84 +8,6 @@
 
 ## Notes
 
-### The new software hygiene: Declare a license or risk losing participation
-
-I had the privilege of working with David Tilbrook almost 25 years ago. 
-He was the first person with whom I ever worked that clearly articulated proper software construction discipline for collaborative endeavours and captured a summary of it under the title, Washing Behind Your Ears: Principles of Software Hygiene.
-
-David articulated these practices pre-World Wide Web. 
-We weren't yet living in a world where the Web had so completely removed the friction of time and space from sharing and collaborating 
-on software that even the early Internet enabled.
-The open source definition hadn't yet been coined. The forges hadn't yet been built.
-
-The world has progressed and there's a new sort of software hygiene that's now required. 
-I first learned back in May 2012 that one of the most popular software collaboration forges, Github, 
-doesn't require a project creator to choose a license for their software. 
-On September 17th, 2012, James Governor (@monkchips) reminded me of this madness when he tweeted:
-
-> younger devs today are about POSS - post open source software. f### the license and governance, just commit to github
-
-I (@stephenrwalli) replied:
-
-> Governance implies community but promiscuous sharing w/out a license leads to software transmitted diseases
-
-Pretty soon, a lively discussion was off and running with @nearyd, @mmilinkov, @webmink, @dberkholz, and @tieguy joining in.
-
-Here's the problem: governments protect software creations using copyright law. 
-Different governments have different views of how it applies and slightly different terminology. 
-Some countries worry about author's moral rights. Others don't. 
-Countries also have different opinions on what the public domain means and how it can (or can't) be applied with respect to software. 
-Essentially, as with all things in the software legal space, it's a mess.
-
-Disclaimer: This is probably a good time to remind the reader that I am not a lawyer.
-
-Living in a proprietary software world, it was relatively "easy". 
-Companies asserted their copyrights as protection for their software products. 
-As software publication and collaboration became ubiquitous, we saw the rise of free and open source software licenses. 
-These were used as statements of sharing intent and expectation by authors on their works. 
-If a collaborative community arose around the project, 
-these licenses were often the initial declaration of the social contract long before the community ever evolved to statements of governance and codes of conduct.
-
-So here's the problem. 
-If you share software on the Internet without using a license, the software is protected by your copyright and all rights revert to you. 
-You have made no statement about how it might be used, or what you would agree to, now or in the future. 
-If you share on a promiscuous site like Github, where forking is encouraged, 
-and you make no such sharing statement, and start accepting change requests from other developers without licenses, 
-then you're collectively creating a copyright mess that will eventually hurt people using your software.
-
-By not caring, or naively believing it doesn't matter because you think "people can do whatever they want with my software," 
-or worse using others' unlicensed software in your own means, you will eventually hit a point where you stifle the growth of your software.
-
-It's not that you're necessarily creating a provenance mess where "dirty" IP will creep into the mix 
-(although I'm sure some companies will try to provoke that fear to sell you things, or worse sell other people things to "protect them" from your software). 
-It's very possible that you could create a "Software Transmitted Disease", 
-but what you are definitely doing is limiting your project's growth.
-
-Professional developers have a working understanding of software copyright. 
-By professional, I mean developers more knowledgeable than you that can make your project better through contribution. 
-When they see that there's no license on your pool of software, if you're lucky, 
-they will ask you to declare one so they can know if they want to adopt and contribute. 
-If you're not so lucky, then they will simply move on and you will have lost whatever contributions they may have brought to your party.
-
-I'm not talking about Great Knowledgeable Developers who are going to join your project and stay. 
-If you're lucky, you'll attract a few folks to your world that know a few things more about it and share them. 
-That's ultimately the economic strength of a well run open source project. 
-Collectively we're better. Neither am I talking about what you might need to do when Building a Big Community.
-
-I'm simply talking about sharing your software brilliance. 
-Because that's why you published on a site like Github, right? 
-So you could share and learn. If you don't put a license on it, you risk losing knowledgeable participation.
-
-So here are some bumper sticker banners to help remind you of the necessary software hygiene of the new millennium:
-```
-Github without licenses is like free sex without condoms.
-Practice safe software on the Internet—use a license.
-Practice good software hygiene—license your software.
-Don't fork around without a license.
-```
-Collaborative development with liberal open source licenses is one of the best things that has come out of the World Wide Web 
-phenomenon and helps sustain and grow it. Do it wisely.
-
 ### Everything you need to know about licensing in 2 minutes 
 
 * Software is protected by copyright law in the U.S. and many other countries.
@@ -98,33 +20,36 @@ These essentially say:
 1. Do give me credit for my work.
 1. THIS SOFTWARE COMES WITH NO WARRANTIES, USE AT YOUR OWN RISK, [ALL IN CAPITAL LETTERS BECAUSE WE REALLY REALLY MEAN IT].
 
-It takes about two minutes each to read the Apache 2.0, Berkeley, and MIT licenses. Pick one. 
+It takes about two minutes each to read the (Apache 2.0)[https://opensource.org/licenses/Apache-2.0], 
+(BSD)[https://opensource.org/licenses/BSD-3-Clause], 
+and (MIT)[https://opensource.org/licenses/MIT] licenses. Pick one. 
 They are good enough for one of the most successful collaborations we have witnessed in the short history of software development, 
 and for two institutions for higher learning recognized for their contributions to computer and software technology. 
 These licenses were written by lawyers that understood software copyright law and liberally sharing software. 
 Apache Software Foundation projects are powering the growing business ecosystems of cloud computing, 
-and have successfully powered the rise of the web for 15 years. 
+and have successfully powered the rise of the web for 20+ years. 
 No lawyer you hire will do better.
 
-If you live on GitHub, 
-it will take you less time than reading this post to visit the appropriate OSI URL, copy the text, 
+If you are publishing software on GitHub, 
+it will take you less time than reading notes to visit the appropriate OSI URL, copy the text, 
 and paste it into a LICENSE file in the top of the tree with the appropriate minor edits for date and project name.
 
 If you care about software freedom, 
 then you are admitting you have already probably read more on the topic than the average developer, 
-and can go refresh yourself on the excellent Free Software Foundation essays, re-read the GNU licenses, and choose appropriately.
+and can go refresh yourself on the (excellent Free Software Foundation essays)[https://www.gnu.org/philosophy/philosophy.html], re-read the GNU licenses, 
+and choose appropriately.
 
 If you are trying to "make money" from your software, 
 then you are admitting you need to involve a lawyer in your business, 
 or spend enough time educating yourself on the business tools available in your chosen profession. 
-A very good reference for developers is Van Lindberg's Intellectual Property and Open Source.
+A very good reference for developers is Van Lindberg's 
+'(Intellectual Property and Open Source)[https://pdfs.semanticscholar.org/6e91/9a6a1f641f741214a64b803d8890fb4b43cd.pdf]'.
 
-If you think you need an opinion on software patents, re-read the previous paragraph.
+If you think you need an opinion on software patents, then you are (again) admitting that you probably need to talk to an attorney or read the book.
 
-That's it. There's the two minute class.  If you read quickly, it was over faster.
+That's it. There's the two minute class.  (If you read quickly, it was over faster.)
 
-Any other discussion is window-dressing or whining, 
-and just plain unprofessional if you write software for a living or for other people to use. 
+Any other discussion is window-dressing if you write software for a living or for other people to use. 
 If you want folks to use your software, license your work. Writers do it. Artists do it. Engineers and architects do it.  
 So should you.
 
@@ -257,3 +182,81 @@ Full text of all the licenses can be found on the Open Source Initiative at: htt
 Excellent information on how to consider various software licenses in combination with the GPL can be found here: http://www.gnu.org/licenses/license-list.html#SoftwareLicenses
 
 If you need to get a lawyer up to speed, consider pointing them to: http://www.ifosslr.org/ifosslr
+
+### The new software hygiene: Declare a license or risk losing participation
+
+I had the privilege of working with David Tilbrook almost 25 years ago. 
+He was the first person with whom I ever worked that clearly articulated proper software construction discipline for collaborative endeavours and captured a summary of it under the title, Washing Behind Your Ears: Principles of Software Hygiene.
+
+David articulated these practices pre-World Wide Web. 
+We weren't yet living in a world where the Web had so completely removed the friction of time and space from sharing and collaborating 
+on software that even the early Internet enabled.
+The open source definition hadn't yet been coined. The forges hadn't yet been built.
+
+The world has progressed and there's a new sort of software hygiene that's now required. 
+I first learned back in May 2012 that one of the most popular software collaboration forges, Github, 
+doesn't require a project creator to choose a license for their software. 
+On September 17th, 2012, James Governor (@monkchips) reminded me of this madness when he tweeted:
+
+> younger devs today are about POSS - post open source software. f### the license and governance, just commit to github
+
+I (@stephenrwalli) replied:
+
+> Governance implies community but promiscuous sharing w/out a license leads to software transmitted diseases
+
+Pretty soon, a lively discussion was off and running with @nearyd, @mmilinkov, @webmink, @dberkholz, and @tieguy joining in.
+
+Here's the problem: governments protect software creations using copyright law. 
+Different governments have different views of how it applies and slightly different terminology. 
+Some countries worry about author's moral rights. Others don't. 
+Countries also have different opinions on what the public domain means and how it can (or can't) be applied with respect to software. 
+Essentially, as with all things in the software legal space, it's a mess.
+
+Disclaimer: This is probably a good time to remind the reader that I am not a lawyer.
+
+Living in a proprietary software world, it was relatively "easy". 
+Companies asserted their copyrights as protection for their software products. 
+As software publication and collaboration became ubiquitous, we saw the rise of free and open source software licenses. 
+These were used as statements of sharing intent and expectation by authors on their works. 
+If a collaborative community arose around the project, 
+these licenses were often the initial declaration of the social contract long before the community ever evolved to statements of governance and codes of conduct.
+
+So here's the problem. 
+If you share software on the Internet without using a license, the software is protected by your copyright and all rights revert to you. 
+You have made no statement about how it might be used, or what you would agree to, now or in the future. 
+If you share on a promiscuous site like Github, where forking is encouraged, 
+and you make no such sharing statement, and start accepting change requests from other developers without licenses, 
+then you're collectively creating a copyright mess that will eventually hurt people using your software.
+
+By not caring, or naively believing it doesn't matter because you think "people can do whatever they want with my software," 
+or worse using others' unlicensed software in your own means, you will eventually hit a point where you stifle the growth of your software.
+
+It's not that you're necessarily creating a provenance mess where "dirty" IP will creep into the mix 
+(although I'm sure some companies will try to provoke that fear to sell you things, or worse sell other people things to "protect them" from your software). 
+It's very possible that you could create a "Software Transmitted Disease", 
+but what you are definitely doing is limiting your project's growth.
+
+Professional developers have a working understanding of software copyright. 
+By professional, I mean developers more knowledgeable than you that can make your project better through contribution. 
+When they see that there's no license on your pool of software, if you're lucky, 
+they will ask you to declare one so they can know if they want to adopt and contribute. 
+If you're not so lucky, then they will simply move on and you will have lost whatever contributions they may have brought to your party.
+
+I'm not talking about Great Knowledgeable Developers who are going to join your project and stay. 
+If you're lucky, you'll attract a few folks to your world that know a few things more about it and share them. 
+That's ultimately the economic strength of a well run open source project. 
+Collectively we're better. Neither am I talking about what you might need to do when Building a Big Community.
+
+I'm simply talking about sharing your software brilliance. 
+Because that's why you published on a site like Github, right? 
+So you could share and learn. If you don't put a license on it, you risk losing knowledgeable participation.
+
+So here are some bumper sticker banners to help remind you of the necessary software hygiene of the new millennium:
+```
+Github without licenses is like free sex without condoms.
+Practice safe software on the Internet—use a license.
+Practice good software hygiene—license your software.
+Don't fork around without a license.
+```
+Collaborative development with liberal open source licenses is one of the best things that has come out of the World Wide Web 
+phenomenon and helps sustain and grow it. Do it wisely.
