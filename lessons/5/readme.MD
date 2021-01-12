@@ -20,9 +20,9 @@ These essentially say:
 1. Do give me credit for my work.
 1. THIS SOFTWARE COMES WITH NO WARRANTIES, USE AT YOUR OWN RISK, [ALL IN CAPITAL LETTERS BECAUSE WE REALLY REALLY MEAN IT].
 
-It takes about two minutes each to read the (Apache 2.0)[https://opensource.org/licenses/Apache-2.0], 
-(BSD)[https://opensource.org/licenses/BSD-3-Clause], 
-and (MIT)[https://opensource.org/licenses/MIT] licenses. Pick one. 
+It takes about two minutes each to read the [Apache 2.0](https://opensource.org/licenses/Apache-2.0), 
+[BSD](https://opensource.org/licenses/BSD-3-Clause), 
+and [MIT](https://opensource.org/licenses/MIT) licenses. Pick one. 
 They are good enough for one of the most successful collaborations we have witnessed in the short history of software development, 
 and for two institutions for higher learning recognized for their contributions to computer and software technology. 
 These licenses were written by lawyers that understood software copyright law and liberally sharing software. 
@@ -36,14 +36,14 @@ and paste it into a LICENSE file in the top of the tree with the appropriate min
 
 If you care about software freedom, 
 then you are admitting you have already probably read more on the topic than the average developer, 
-and can go refresh yourself on the (excellent Free Software Foundation essays)[https://www.gnu.org/philosophy/philosophy.html], re-read the GNU licenses, 
+and can go refresh yourself on the [excellent Free Software Foundation essays](https://www.gnu.org/philosophy/philosophy.html), re-read the GNU licenses, 
 and choose appropriately.
 
 If you are trying to "make money" from your software, 
 then you are admitting you need to involve a lawyer in your business, 
 or spend enough time educating yourself on the business tools available in your chosen profession. 
 A very good reference for developers is Van Lindberg's 
-'(Intellectual Property and Open Source)[https://pdfs.semanticscholar.org/6e91/9a6a1f641f741214a64b803d8890fb4b43cd.pdf]'.
+'[Intellectual Property and Open Source](https://pdfs.semanticscholar.org/6e91/9a6a1f641f741214a64b803d8890fb4b43cd.pdf)'.
 
 If you think you need an opinion on software patents, then you are (again) admitting that you probably need to talk to an attorney or read the book.
 
