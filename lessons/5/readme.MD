@@ -59,8 +59,9 @@ So should you.
 ### A longer discussion about which open source software license should you use? 
 
 The first and obvious consideration is whether or not the license is approved as an open source license by the Open Source Initiative (OSI). 
-The OSI created the Open Source Definition in the late 1990s as a set of attributes that a software license must support to be considered "open source." 
-Anyone can take a license to the OSI for debate and discussion and if approved as meeting the OSD, then the license is added to the canonical list.
+As we saw, the OSI created the Open Source Definition in the late 1990s as a set of attributes that a software license must support to be considered "open source." 
+Anyone can take a license to the OSI for debate and discussion and if approved as meeting the OSD, 
+then the license is added [to the canonical list](https://opensource.org/licenses).
 
 While this seems an obvious place to start, 
 you will still see situations where a corporate lawyer has taken an approved license and made a few 'minor' edits for clarification. 
@@ -79,11 +80,11 @@ and whether the source code to those modifications and derivatives needs to be p
 
 On one end of the spectrum are licenses that have no copyleft requirements. 
 These licenses essentially allow anyone to use the software in anyway without requiring much more than maintaining copyrights. 
-Licenses that fall into this set include the New and Simplified BSD licenses, the MIT license, and the Apache 2.0 and Microsoft Permissive licenses.
+Licenses that fall into this set include the New and Simplified BSD licenses, the MIT license, and the Apache 2.0 licenses.
 
 There are a set of licenses that maintain a sense of copyleft around the software itself 
 but support the use of the software in larger works of software which may contain software that is licensed differently (e.g. closed and proprietary). 
-These licenses include the Eclipse Public License, the newer Mozilla Public License 2.0, and the Microsoft Reciprocal License.
+These licenses include the Eclipse Public License, and the newer Mozilla Public License 2.0.
 
 On the other end of the copyleft spectrum are strong copyleft licenses. 
 Software freedom is defined by the Free Software Foundation in terms of the freedoms a user of software must have. 
@@ -95,9 +96,8 @@ as a way to ensure the strongest copyleft and strongest license attachment when 
 Software patents weren’t really an issue when software was beginning to be widely shared on the early Internet and so weren’t mentioned in the early licenses. 
 By the late 1990s, 
 software patents were on the rise and corporate legal teams were becoming more involved in the writing of open source licenses 
-as they became more involved with open source software and developing the open source foundations around evolving projects. 
-The Apache 2.0 License, Mozilla Public License 2.0, Eclipse Public License, the newer GPL licenses, 
-and both Microsoft licenses reflect this shift in language. 
+as they became more involved with open source software and developing the open source non-profits around evolving projects. 
+The Apache 2.0 License, Mozilla Public License 2.0, Eclipse Public License, and the newer GPL licenses reflect this shift in language. 
 Each license explicitly talks about patent licenses. 
 Each license has language that covers patent litigation to varying degrees.
 
@@ -108,7 +108,7 @@ as that was often a criticism of the earlier license.)
 
 Other considerations in license choice include:
 * Are there project specific affinities?
-* History of the license and foundation/corporate/commercial involvement?
+* History of the license and non-profit/corporate/commercial involvement?
 
 The "language" projects (Perl, PHP, Python) each have their own licenses 
 (Artistic License 2.0, PHP License 3.0, and Python License 2.0 respectively). 
@@ -135,15 +135,14 @@ Both of these licenses came from the academic world, and both from a period of t
 
 If you want to allow anyone to do anything with the software (so no copyleft), 
 but feel something needs to be said about patents and license termination in the face of litigation, 
-and/or you want a license that corporate counsel is more comfortable reading then look at either the Apache 2.0 license or possibly 
-the Microsoft Permissive License. 
+and/or you want a license that corporate counsel is more comfortable reading then look at the Apache 2.0 license. 
 These licenses were written to continue to encourage a completely open sharing environment 
 but were written with a more corporate view (note the structure and language), 
 and both begin to cover patents with varying (and subtly different) degrees of patent retaliation built into them.
 
-If you feel others should be able to build [possibly product] around your software, 
+If you feel others should be able to build [possibly closed proprietary product] around your software, 
 but want to ensure changes to the core software project itself remain open source (i.e. the changes must be published), 
-you likely want to look to either the Eclipse Public License, the newer Mozilla Public License 2.0, or the Microsoft Reciprocal License. 
+you likely want to look to either the Eclipse Public License, or the newer Mozilla Public License 2.0. 
 These are modern licenses developed from commercial/corporate perspectives supporting "weak" copyleft. 
 [N.B. The EPL does name NY State as the jurisdiction.] Pay attention to patent statements in each.
 
@@ -174,86 +173,7 @@ the choice of license reflects as much of the social contract that is being made
 It is the first governance document of the early possible community that comes into play long before formal governance, mission statements, 
 and codes of conduct may be created around growing community.
 
-Full text of all the licenses can be found on the Open Source Initiative at: http://opensource.org/licenses/alphabetical
-
 Excellent information on how to consider various software licenses in combination with the GPL can be found here: http://www.gnu.org/licenses/license-list.html#SoftwareLicenses
 
-If you need to get a lawyer up to speed, consider pointing them to: http://www.ifosslr.org/ifosslr
 
-### The new software hygiene: Declare a license or risk losing participation
 
-I had the privilege of working with David Tilbrook almost 25 years ago. 
-He was the first person with whom I ever worked that clearly articulated proper software construction discipline for collaborative endeavours and captured a summary of it under the title, Washing Behind Your Ears: Principles of Software Hygiene.
-
-David articulated these practices pre-World Wide Web. 
-We weren't yet living in a world where the Web had so completely removed the friction of time and space from sharing and collaborating 
-on software that even the early Internet enabled.
-The open source definition hadn't yet been coined. The forges hadn't yet been built.
-
-The world has progressed and there's a new sort of software hygiene that's now required. 
-I first learned back in May 2012 that one of the most popular software collaboration forges, Github, 
-doesn't require a project creator to choose a license for their software. 
-On September 17th, 2012, James Governor (@monkchips) reminded me of this madness when he tweeted:
-
-> younger devs today are about POSS - post open source software. f### the license and governance, just commit to github
-
-I (@stephenrwalli) replied:
-
-> Governance implies community but promiscuous sharing w/out a license leads to software transmitted diseases
-
-Pretty soon, a lively discussion was off and running with @nearyd, @mmilinkov, @webmink, @dberkholz, and @tieguy joining in.
-
-Here's the problem: governments protect software creations using copyright law. 
-Different governments have different views of how it applies and slightly different terminology. 
-Some countries worry about author's moral rights. Others don't. 
-Countries also have different opinions on what the public domain means and how it can (or can't) be applied with respect to software. 
-Essentially, as with all things in the software legal space, it's a mess.
-
-Disclaimer: This is probably a good time to remind the reader that I am not a lawyer.
-
-Living in a proprietary software world, it was relatively "easy". 
-Companies asserted their copyrights as protection for their software products. 
-As software publication and collaboration became ubiquitous, we saw the rise of free and open source software licenses. 
-These were used as statements of sharing intent and expectation by authors on their works. 
-If a collaborative community arose around the project, 
-these licenses were often the initial declaration of the social contract long before the community ever evolved to statements of governance and codes of conduct.
-
-So here's the problem. 
-If you share software on the Internet without using a license, the software is protected by your copyright and all rights revert to you. 
-You have made no statement about how it might be used, or what you would agree to, now or in the future. 
-If you share on a promiscuous site like Github, where forking is encouraged, 
-and you make no such sharing statement, and start accepting change requests from other developers without licenses, 
-then you're collectively creating a copyright mess that will eventually hurt people using your software.
-
-By not caring, or naively believing it doesn't matter because you think "people can do whatever they want with my software," 
-or worse using others' unlicensed software in your own means, you will eventually hit a point where you stifle the growth of your software.
-
-It's not that you're necessarily creating a provenance mess where "dirty" IP will creep into the mix 
-(although I'm sure some companies will try to provoke that fear to sell you things, or worse sell other people things to "protect them" from your software). 
-It's very possible that you could create a "Software Transmitted Disease", 
-but what you are definitely doing is limiting your project's growth.
-
-Professional developers have a working understanding of software copyright. 
-By professional, I mean developers more knowledgeable than you that can make your project better through contribution. 
-When they see that there's no license on your pool of software, if you're lucky, 
-they will ask you to declare one so they can know if they want to adopt and contribute. 
-If you're not so lucky, then they will simply move on and you will have lost whatever contributions they may have brought to your party.
-
-I'm not talking about Great Knowledgeable Developers who are going to join your project and stay. 
-If you're lucky, you'll attract a few folks to your world that know a few things more about it and share them. 
-That's ultimately the economic strength of a well run open source project. 
-Collectively we're better. Neither am I talking about what you might need to do when Building a Big Community.
-
-I'm simply talking about sharing your software brilliance. 
-Because that's why you published on a site like Github, right? 
-So you could share and learn. If you don't put a license on it, you risk losing knowledgeable participation.
-
-So here are some bumper sticker banners to help remind you of the necessary software hygiene of the new millennium:
-```
-Github without licenses is like free sex without condoms.
-Practice safe software on the Internet—use a license.
-Practice good software hygiene—license your software.
-Don't fork around without a license.
-```
-Collaborative development with liberal open source licenses is one of the best things that has come out of the World Wide Web 
-phenomenon and helps sustain and grow it. Do it wisely.
