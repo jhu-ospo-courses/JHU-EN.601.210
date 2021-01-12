@@ -7,7 +7,9 @@
 * Have some understanding of current controversies and the implications in an open source community
 
 ## Notes
-
+> 
+> **IANAL** It is important to understand and remember that I am not a lawyer. This is not legal advice. 
+> 
 ### Everything you need to know about licensing in 2 minutes 
 
 * Software is protected by copyright law in the U.S. and many other countries.
@@ -26,9 +28,9 @@ and [MIT](https://opensource.org/licenses/MIT) licenses. Pick one.
 They are good enough for one of the most successful collaborations we have witnessed in the short history of software development, 
 and for two institutions for higher learning recognized for their contributions to computer and software technology. 
 These licenses were written by lawyers that understood software copyright law and liberally sharing software. 
-Apache Software Foundation projects are powering the growing business ecosystems of cloud computing, 
+Apache 2.0 licensed projects are powering the growing business ecosystems of cloud computing, 
 and have successfully powered the rise of the web for 20+ years. 
-No lawyer you hire will do better.
+No lawyer you hire will do better, indeed, they may slow you down. 
 
 If you are publishing software on GitHub, 
 it will take you less time than reading notes to visit the appropriate OSI URL, copy the text, 
@@ -53,7 +55,7 @@ Any other discussion is window-dressing if you write software for a living or fo
 If you want folks to use your software, license your work. Writers do it. Artists do it. Engineers and architects do it.  
 So should you.
 
-### Which open source software license should I use? 
+### A longer discussion about which open source software license should you use? 
 
 I’ve recently been involved in several discussions that are variations on, "Which open source or free software license should I choose for my project?" 
 Here is my way of looking at the large and growing collection of licenses in the wild. 
