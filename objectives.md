@@ -45,7 +45,7 @@
 * Know the basic licenses, and where to find more data
 * Have some understanding of current controversies and the implications in an open source community
 
-## Lesson 6: Scaling projects up even more (The role of non-profits in an open source enabled world) 
+## Lesson 6: Scaling projects up even more (The role of non-profits in an open source world) 
 ### Objectives
 * Understand the growth problems of legal liability
 * Understand how a non-profit company solves for liability
