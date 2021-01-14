@@ -6,4 +6,6 @@
 * Understand how non-profit governance relates to project governance
 
 ## Notes
+*N.B. The presentation slides were divided into a part 1 and a part 2 due to file upload size limits.*
+
 TBD
