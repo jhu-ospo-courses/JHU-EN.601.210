@@ -1,18 +1,16 @@
+# Why Your Open Source Start-Up Will Fail
 
-
+## Objectives
+* Understand the basic ideas behind a software business model
+* Understand the three sorts of software you create as a business
+* Understand the difference between projects and products
 
 ## Notes
-I wrote a blog post two years ago called There is NO Open Source Business Model. 
-In it, I argued that open source software is really about engineering economics, 
-where well-run collaborative communities capture orders of magnitude of engineering value, 
-and that Red Hat is really a successful enterprise software company focused on its customers. 
-I've held this opinion for a while now. 
-We have seen lots of debate this past couple of years from a number of directions on 'sustaining open source' in the face of freeloaders, 
-determining significance, the effect of 'Cloud', and venture-backed companies wrestling to build revenue streams. 
-This year is also the twentieth anniversary of the Open Source Definition, which has served us well for two decades.
-I've typically debated the lack of a business model from an engineering economics perspective, 
-focusing on value creation and capture when companies consume externally owned open source project components into their products and services, 
-contributing back as an engineering necessity. 
+## this is a draft ... lots of edits still required ... ##
+
+We have discussed how open source software is about engineering economics, 
+where well-run collaborative project communities capture orders of magnitude of engineering value. 
+
 I want to try a different approach in this post and argue from the perspective that a company needs to run a business. 
 Most of the complaining about the inability to build businesses using the current OSI-approved licenses 
 seem to come from companies creating open source projects and not thinking about the business problem.
@@ -38,12 +36,12 @@ Can we create a business model that enables us to earn attractive profits at the
 Then once you know if you have either a new-market or low-end market disruption: Is the innovation disruptive to ALL of the significant incumbent firms in the industry? If it appears to be a sustaining innovation to one or more significant players in an industry, then the odds are stacked in that firm's favour, and the new entrant unlikely to win.
 Let's think about that business reality in the context of using open source as a publication/sharing mechanism and community as an innovation capture mechanism.
 Publishing software under an open source license is a powerful way to share software. Individual developers love to share software:
-Creating good software is hard work. Re-use in active community is probably the best way we have to support re-use of software that is itself inherently dynamic.
-It's a way to learn/improve the software.
-It provides developers in the community agency and control over their toolchain and deliverables.
-It improves time to delivery of the end result for developers in community, solving their own problems.
-It's a way to signal expertise.
-It's free so it doesn't create enormous friction in the development pipeline, especially in the early experimental stages of creating prototype solutions.
+* Creating good software is hard work. Re-use in active community is probably the best way we have to support re-use of software that is itself inherently dynamic.
+* It's a way to learn/improve the software.
+* It provides developers in the community agency and control over their toolchain and deliverables.
+* It improves time to delivery of the end result for developers in community, solving their own problems.
+* It's a way to signal expertise.
+* It's free so it doesn't create enormous friction in the development pipeline, especially in the early experimental stages of creating prototype solutions.
 
 Building community around such a software project to support the evolution of the software takes work. (Von Hippel has documented this sort of user-centric innovation network since the 1980s in domains as diverse as software, sailboarding, and mountain biking.) For individual developers sharing their own software in community, there is a balance between the value captured and the work to capture the new value itself. Community building doesn't come for free. It requires discipline and tooling to scale, i.e. software engineering expertise beyond the domain expertise in the problem itself.
 Caveat Lector: I am not discussing open source consumption economics, just the production side.
@@ -77,7 +75,8 @@ Open source licensed projects in well-run communities generate enormous value. B
 A company needs to create a market around a solution to a customer's problem to succeed. Collaboratively-developed, liberally-licensed software provides a wealth of tools for companies to use. But if you're a company that solves customer problems through the delivery of software, then you still have to run a business. You also need to know exactly what problem you're solving from your customer's perspective. And as Theodore Levitt pointed out,
 The customer didn't want a 1/4" drill. They wanted a 1/4" hole.
 This past year I've had the pleasure and privilege of debating the existence of open source business models (and the lack thereof) with Jeff Borek from IBM at a number of events, and we'll debate again next week at the Open Source Summit EU, in Edinburgh. Maybe this time, I will find the best way to explain a lack of 'open source' business models.
+
 References:
-[1] Geoffrey Moore, 'Crossing the Chasm', and 'Dealing with Darwin'.
-[2] Clayton Christensen, 'The Innovator's Dilemma', and 'The Innovator's Solution'.
-[3] Von Hippel on open source and user-centred innovation networks, http://www.oecd.org/education/innovation-education/32125887.pdf
+* [1] Geoffrey Moore, 'Crossing the Chasm', and 'Dealing with Darwin'.
+* [2] Clayton Christensen, 'The Innovator's Dilemma', and 'The Innovator's Solution'.
+* [3] Von Hippel on open source and user-centred innovation networks, http://www.oecd.org/education/innovation-education/32125887.pdf
