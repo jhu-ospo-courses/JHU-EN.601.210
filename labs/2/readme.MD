@@ -137,78 +137,7 @@ At this point, you have a basic Ubuntu machine on which to test build the projec
 As you build the softfware, you may indeed encounter other dependencies for tools. 
 You can use `apt-get` to pull any other tooling you might need. (You might even note it in the report.) 
 
-### Example Report ### 
 
-> Student-Name
->
-> Student-Email
->
-> Project I am evaluating: Node
-> 
-> Project Website: https://nodejs.org/en/
-> 
-> Project License: https://opensource.org/licenses/MIT (license which all node.js src originating from the node repo)
->   full license including external libraries is found here https://github.com/nodejs/node/blob/master/LICENSE
-> 
-> Introductory Documents: There is a comprehensive Getting Started documentation for Node.js which can be found at this link: https://nodejs.org/en/docs/guides/getting-started-guide/.
-> This guide seems to walk users through everything, from installation to the nuances of the source code and any potential uses a user may have for it.
-> I also found the api documentation at this link: https://nodejs.org/api/. This documentation describes built-in modules provided by Node.js
-> (it doesn't include any modules provided by community). The Node.js website also provides api documentation for each of the different versions
-> of Node.js which is very useful for people who are running older versions of the source code (great for ensuring overall documentation of all
-> versions users, developers, and contributors may be using). Here is also a list of a complication of any helpful documentations someone may need (https://nodejs.org/en/docs/guides/)
-> 
-> FAQs: There is not a specific FAQ page associated with this project. Though at this url you may find a list of methods to get involved with community discussions
->  (https://nodejs.org/en/get-involved/)
-> 
-> User Installation: Users are able to install the project without building from the source by downloading a file from this url: https://nodejs.org/en/download/
-> The platforms that are supported are: Windows, macOS, Linux, SmartOS, Docker, and AIX on Power Systems.
-> 
-> Installer Support: I am currently running macOS. The Node.js website has a macOS installer I can download directly from the website. I can also use
-> Homebrew, MacPorts, and pkgsrc as alternative installers.
-> 
-> Bugtracking/Issues: Issues tracking can be found here: https://github.com/nodejs/node/issues
-> 
-> How-to: This document details how to report an issue with the code: https://github.com/nodejs/node/blob/master/doc/guides/contributing/issues.md#submitting-a-bug-report
-> 
-> Source Availability: Complete source code was extremely easy to download and find after a simple search (located here: https://github.com/nodejs/node)
-> 
-> Building the Project from Source: There are comprehensive instructions on how to build the project from src for all supported platforms
-> located here: https://github.com/nodejs/node/blob/master/BUILDING.md.
-> 
-> Testing to a Known State: There is a test directory (https://github.com/nodejs/node/tree/master/test) and in the instructions on how to build
-> the project from source they also tell a user how to run the test suit.
-> 
-> Design or Architectural Documentation: There did not seem to be a design documentation
-> 
-> Project Communications: I was able to find the page that had links for associated community discussions (https://nodejs.org/en/get-involved/).
-> On this page there were links to access the community Slack and IRC. There are a handful of other avenues through which someone can interact with
-> Node.js managers and the community to have their questions or concerns addressed.
-> 
-> Project Mission: There is not an outright mission statement for the project but there is an About page on the project website detailing what Node.js
-> is and why it has been created (https://nodejs.org/en/about/).
-> 
-> Code-of-Conduct: Code of conduct document in the github https://github.com/nodejs/admin/blob/master/CODE_OF_CONDUCT.md. There is also a page on the project
-> website about the code of conduct of the project https://github.com/nodejs/node/blob/master/doc/guides/contributing/code-of-conduct.md (this is a link to a different
-> code of conduct document in the github).
-> 
-> Contributions: This website on the project page talks about how to get started when contributing to the project (https://nodejs.org/en/get-involved/contribute/)
-> There is also a Contrubtions document in the github repo further outlining how to contribute (https://github.com/nodejs/node/blob/master/CONTRIBUTING.md#pull-requests)
-> 
-> Meet-ups and Learning Forums: This is a list of events that people can attend to get started or continue contributing to the project(https://nodejs.org/en/get-involved/code-and-learn/).
-> There is also a collaboration summit listed on their website: https://nodejs.org/en/get-involved/collab-summit/. There is also a detailed list of links to meetups
-> based on geographical location and the code base for these groups (https://nodejs.org/en/get-involved/node-meetups/).
-> 
-> Source Code Base: I was unable to finish the build after waiting for 3 hours to complete.
-> 
-> My Evaluation: Overall the experience looking through the Node.js documentation was fairly easy. Finding the website and the github repo took a simple search and all of the
-> information was smartly organized that allowed for navigating with ease. Downloading the sourcecode for the project was quite large so it did take some time (especially any
-> other implicit installations that took place), but by using the installers the project was very easy to download. Overall, I have a very positive perspective of the project
-> and their compliance with the open source guidelines to ensure and promote software and community development.
-> 
-> 
-> TRIAL BUILDS:
-> I was unable to finish the build after waiting for 3 hours to complete. Because of this I am unable to determine whether the build instructions for the source
-> code ran successfully or not. 
 
 
 
