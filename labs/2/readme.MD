@@ -1,4 +1,4 @@
-# Lab 2: Evaluating Projects 
+# Lab 2: Evaluating Projects  
 In Lesson 3 we took a look at activities that maintainers of OSI-licensed software projects could do to build on-ramps to engage users, 
 developers, and contributors to the project. 
 In Lab 1, we built the Apache webserver from source, following along from a 'found' web page in the project's website. 
